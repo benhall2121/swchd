@@ -1,0 +1,111 @@
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (363.8ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (283.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+  [1m[35mSQL (168.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `password_hash` varchar(255), `password_salt` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `address` varchar(255), `city` varchar(255), `state` varchar(255), `dob` varchar(255), `sex` varchar(255), `blood_type` varchar(255), `notes` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110625053432')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jun 24 22:50:27 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (88.2ms)
+Rendered users/new.html.erb within layouts/application (102.1ms)
+Completed 200 OK in 136ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri Jun 24 22:50:39 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "user"=>{"password_salt"=>"[FILTERED]", "password_hash"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+WARNING: Can't mass-assign protected attributes: password_salt, password_hash
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (81.8ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') LIMIT 1
+  [1m[36mSQL (6.6ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (18.1ms)
+Rendered users/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 504ms (Views: 41.1ms | ActiveRecord: 88.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri Jun 24 22:50:46 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "user"=>{"password_salt"=>"[FILTERED]", "password_hash"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+WARNING: Can't mass-assign protected attributes: password_salt, password_hash
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (18.5ms)
+Rendered users/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 176ms (Views: 114.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri Jun 24 22:51:55 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "user"=>{"password_salt"=>"[FILTERED]", "password_hash"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+WARNING: Can't mass-assign protected attributes: password_salt, password_hash
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Rendered users/_form.html.erb (18.1ms)
+Rendered users/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 103ms (Views: 42.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri Jun 24 22:52:01 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `users` (`first_name`, `state`, `blood_type`, `last_name`, `phone`, `sex`, `password_hash`, `password_salt`, `city`, `notes`, `created_at`, `email`, `updated_at`, `address`, `dob`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, '$2a$10$b25DdDNFChK369p42zecGuGE/ed3/AA3jB7Z2qxP.UPW12cfV39XK', '$2a$10$b25DdDNFChK369p42zecGu', NULL, NULL, '2011-06-25 05:52:01', 'benhall2121@yahoo.com', '2011-06-25 05:52:01', NULL, NULL)
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 303ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Jun 24 22:52:01 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (37.5ms)
+Rendered users/new.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 84ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at Fri Jun 24 22:52:13 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Fri Jun 24 22:52:20 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 294ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Jun 24 22:52:21 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (37.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 88ms (Views: 65.3ms | ActiveRecord: 0.4ms)
