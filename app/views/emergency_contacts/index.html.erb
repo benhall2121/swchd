@@ -1,0 +1,35 @@
+<h1>Listing emergency_contacts</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Relationship</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emergency_contacts.each do |emergency_contact| %>
+  <tr>
+    <td><%= emergency_contact.user_id %></td>
+    <td><%= emergency_contact.first_name %></td>
+    <td><%= emergency_contact.last_name %></td>
+    <td><%= emergency_contact.phone %></td>
+    <td><%= emergency_contact.email %></td>
+    <td><%= emergency_contact.address %></td>
+    <td><%= emergency_contact.relationship %></td>
+    <td><%= link_to 'Show', emergency_contact %></td>
+    <td><%= link_to 'Edit', edit_emergency_contact_path(emergency_contact) %></td>
+    <td><%= link_to 'Destroy', emergency_contact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Emergency contact', new_emergency_contact_path %>
