@@ -1,4 +1,6 @@
 Swchd::Application.routes.draw do
+  resources :attached_files
+
   resources :emergency_contacts
 
   get "log_out" => "sessions#destroy", :as => "log_out"

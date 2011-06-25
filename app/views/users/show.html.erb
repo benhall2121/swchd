@@ -6,16 +6,6 @@
 </p>
 
 <p>
-  <b>Password hash:</b>
-  <%= @user.password_hash %>
-</p>
-
-<p>
-  <b>Password salt:</b>
-  <%= @user.password_salt %>
-</p>
-
-<p>
   <b>First name:</b>
   <%= @user.first_name %>
 </p>
@@ -67,4 +57,7 @@
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path %> |
+<%= link_to 'Attached File', attached_files_path %> |
+<%= link_to 'Emergency Contacts', emergency_contacts_path %>
+

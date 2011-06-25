@@ -1220,3 +1220,484 @@ Started GET "/emergency_contacts" for 127.0.0.1 at Fri Jun 24 23:39:20 -0700 201
   [1m[36mEmergencyContact Load (0.3ms)[0m  [1mSELECT `emergency_contacts`.* FROM `emergency_contacts`[0m
 Rendered emergency_contacts/index.html.erb within layouts/application (71.8ms)
 Completed 200 OK in 400ms (Views: 82.5ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to CreateEmergencyContacts (20110625060106)
+Migrating to CreateAttachedFiles (20110625065714)
+  [1m[35mSQL (130.4ms)[0m  CREATE TABLE `attached_files` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110625065714')[0m
+Migrating to AddFileToAttachedFile (20110625071254)
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110625071254')
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.6ms)[0m  describe `attached_files`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `attached_files`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `emergency_contacts`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `emergency_contacts`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to AddFileToAttachedFile (20110625071254)
+  [1m[35mAREL (0.8ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110625071254'
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (2.0ms)[0m  describe `attached_files`
+  [1m[36mSQL (2.0ms)[0m  [1mSHOW KEYS FROM `attached_files`[0m
+  [1m[35mSQL (2.5ms)[0m  describe `emergency_contacts`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `emergency_contacts`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to CreateEmergencyContacts (20110625060106)
+Migrating to CreateAttachedFiles (20110625065714)
+Migrating to AddFileToAttachedFile (20110625071254)
+  [1m[35mSQL (127.6ms)[0m  ALTER TABLE `attached_files` ADD `file_file_name` varchar(255)
+  [1m[36mSQL (261.0ms)[0m  [1mALTER TABLE `attached_files` ADD `file_content_type` varchar(255)[0m
+  [1m[35mSQL (139.0ms)[0m  ALTER TABLE `attached_files` ADD `file_file_size` varchar(255)
+  [1m[36mSQL (115.6ms)[0m  [1mALTER TABLE `attached_files` ADD `file_updated_at` datetime[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110625071254')
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.4ms)[0m  describe `attached_files`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `attached_files`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `emergency_contacts`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `emergency_contacts`[0m
+  [1m[35mSQL (1.8ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:22:57 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (281.7ms)
+Completed 200 OK in 305ms (Views: 302.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emergency_contacts" for 127.0.0.1 at Sat Jun 25 00:23:10 -0700 2011
+  Processing by EmergencyContactsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mEmergencyContact Load (0.3ms)[0m  SELECT `emergency_contacts`.* FROM `emergency_contacts`
+Rendered emergency_contacts/index.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 205ms (Views: 78.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:23:16 -0700 2011
+  Processing by AttachedFilesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files`
+Rendered attached_files/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 97ms (Views: 46.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/attached_files/new" for 127.0.0.1 at Sat Jun 25 00:23:18 -0700 2011
+  Processing by AttachedFilesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered attached_files/_form.html.erb (51.7ms)
+Rendered attached_files/new.html.erb within layouts/application (95.5ms)
+Completed 200 OK in 189ms (Views: 122.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/attached_files" for 127.0.0.1 at Sat Jun 25 00:23:27 -0700 2011
+  Processing by AttachedFilesController#create as HTML
+  Parameters: {"commit"=>"Create Attached file", "attached_file"=>{"user_id"=>"1", "file"=>#<ActionDispatch::Http::UploadedFile:0x265e60c @headers="Content-Disposition: form-data; name=\"attached_file[file]\"; filename=\"BenHall-Resume.pdf\"\r\nContent-Type: application/pdf\r\n", @original_filename="BenHall-Resume.pdf", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110625-25114-ltk3p9-0>, @content_type="application/pdf">}, "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+[paperclip] identify -format %wx%h '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110625-25114-1bziri9-0.pdf[0]' 2>/dev/null
+[paperclip] convert '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110625-25114-1bziri9-0.pdf[0]' -resize "150x150>" '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110625-25114-1bziri9-020110625-25114-1u6jfxt-0' 2>/dev/null
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `attached_files`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `attached_files` (`created_at`, `user_id`, `file_file_name`, `file_updated_at`, `file_file_size`, `updated_at`, `file_content_type`) VALUES ('2011-06-25 07:23:32', 1, 'BenHall-Resume.pdf', '2011-06-25 07:23:28', 247933, '2011-06-25 07:23:32', 'application/pdf')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/Ben/desktop/work/sidework/swchd/public/assets/files/1/small/BenHall-Resume.pdf
+[paperclip] saving /Users/Ben/desktop/work/sidework/swchd/public/assets/files/1/original/BenHall-Resume.pdf
+  [1m[35mSQL (23.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/attached_files/1
+Completed 302 Found in 4506ms
+
+
+Started GET "/attached_files/1" for 127.0.0.1 at Sat Jun 25 00:23:32 -0700 2011
+  Processing by AttachedFilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.4ms)[0m  SELECT `attached_files`.* FROM `attached_files` WHERE `attached_files`.`id` = 1 LIMIT 1
+Rendered attached_files/show.html.erb within layouts/application (71.4ms)
+Completed 200 OK in 225ms (Views: 109.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/attached_files/1" for 127.0.0.1 at Sat Jun 25 00:25:19 -0700 2011
+  Processing by AttachedFilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.4ms)[0m  SELECT `attached_files`.* FROM `attached_files` WHERE `attached_files`.`id` = 1 LIMIT 1
+Rendered attached_files/show.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 211ms (Views: 68.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/attached_files/1" for 127.0.0.1 at Sat Jun 25 00:25:48 -0700 2011
+  Processing by AttachedFilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (1.2ms)[0m  SELECT `attached_files`.* FROM `attached_files` WHERE `attached_files`.`id` = 1 LIMIT 1
+Rendered attached_files/show.html.erb within layouts/application (65.0ms)
+Completed 500 Internal Server Error in 138ms
+
+ActionView::Template::Error (undefined method `symbolize_keys!' for "/assets/files/1/original/BenHall-Resume.pdf?1308986608":String):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <p>
+    4:   <%= link_to image_tag @attached_file.file.url(:small), @attached_file.file.url(:original) %>
+    5: </p>
+    6: 
+    7: 
+  app/views/attached_files/show.html.erb:4:in `_app_views_attached_files_show_html_erb___342106800_19372870_0'
+  app/controllers/attached_files_controller.rb:18:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (51.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (68.6ms)
+
+
+Started GET "/attached_files/1" for 127.0.0.1 at Sat Jun 25 00:26:27 -0700 2011
+  Processing by AttachedFilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files` WHERE `attached_files`.`id` = 1 LIMIT 1
+Rendered attached_files/show.html.erb within layouts/application (144.8ms)
+Completed 200 OK in 213ms (Views: 156.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/attached_files/1" for 127.0.0.1 at Sat Jun 25 00:26:31 -0700 2011
+  Processing by AttachedFilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files` WHERE `attached_files`.`id` = 1 LIMIT 1
+Rendered attached_files/show.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 123ms (Views: 66.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:26:34 -0700 2011
+  Processing by AttachedFilesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files`
+Rendered attached_files/index.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 80ms
+
+ActionView::Template::Error (undefined method `file' for #<Array:0x2393008>):
+    11: <% @attached_files.each do |attached_file| %>
+    12:   <tr>
+    13:     <td><%= attached_file.user_id %></td>
+    14:     <%= image_tag @attached_files.file.url(:small) %>
+    15:     <td><%= link_to 'Show', attached_file %></td>
+    16:     <td><%= link_to 'Edit', edit_attached_file_path(attached_file) %></td>
+    17:     <td><%= link_to 'Destroy', attached_file, :confirm => 'Are you sure?', :method => :delete %></td>
+  app/views/attached_files/index.html.erb:14:in `_app_views_attached_files_index_html_erb___481685581_18627040_0'
+  app/views/attached_files/index.html.erb:11:in `each'
+  app/views/attached_files/index.html.erb:11:in `_app_views_attached_files_index_html_erb___481685581_18627040_0'
+  app/controllers/attached_files_controller.rb:7:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (49.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (133.3ms)
+
+
+Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:27:11 -0700 2011
+  Processing by AttachedFilesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files`
+Rendered attached_files/index.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 125ms (Views: 70.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:27:17 -0700 2011
+  Processing by AttachedFilesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files`
+Rendered attached_files/index.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 128ms (Views: 73.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sat Jun 25 00:27:55 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:55 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:55 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:55 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:55 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:56 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:27:57 -0700 2011
+  Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:28:10 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Jun 25 00:28:47 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1[0m
+Completed 500 Internal Server Error in 322ms
+
+NoMethodError (undefined method `show_user_path' for #<SessionsController:0x22112fc>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Jun 25 00:28:58 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1
+Completed 500 Internal Server Error in 785ms
+
+NoMethodError (undefined method `show_users_path' for #<SessionsController:0x2528d8c>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Jun 25 00:29:45 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 236ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 00:29:45 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 165ms (Views: 50.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 00:31:14 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 87ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:31:15 -0700 2011
+  Processing by AttachedFilesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAttachedFile Load (0.3ms)[0m  [1mSELECT `attached_files`.* FROM `attached_files`[0m
+Rendered attached_files/index.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 121ms (Views: 69.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 00:31:20 -0700 2011
+
+ActionController::RoutingError (No route matches "/users/1"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 00:31:24 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 89ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/emergency_contacts" for 127.0.0.1 at Sat Jun 25 00:31:26 -0700 2011
+  Processing by EmergencyContactsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mEmergencyContact Load (0.3ms)[0m  [1mSELECT `emergency_contacts`.* FROM `emergency_contacts`[0m
+Rendered emergency_contacts/index.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 125ms (Views: 75.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 00:31:32 -0700 2011
+
+ActionController::RoutingError (No route matches "/users/1"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 00:31:35 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 84ms (Views: 49.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sat Jun 25 00:31:39 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 00:31:39 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Jun 25 00:31:45 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 237ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 00:31:46 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 90ms (Views: 54.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/emergency_contacts" for 127.0.0.1 at Sat Jun 25 00:31:48 -0700 2011
+  Processing by EmergencyContactsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mEmergencyContact Load (0.4ms)[0m  SELECT `emergency_contacts`.* FROM `emergency_contacts`
+Rendered emergency_contacts/index.html.erb within layouts/application (71.3ms)
+Completed 200 OK in 228ms (Views: 164.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 00:31:49 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 89ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:31:51 -0700 2011
+  Processing by AttachedFilesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.4ms)[0m  SELECT `attached_files`.* FROM `attached_files`
+Rendered attached_files/index.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 126ms (Views: 73.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:32:24 -0700 2011
+  Processing by AttachedFilesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files`
+Rendered attached_files/index.html.erb within layouts/application (149.6ms)
+Completed 200 OK in 212ms (Views: 160.0ms | ActiveRecord: 0.6ms)
