@@ -4738,3 +4738,35 @@ Started GET "/goals/61" for 127.0.0.1 at Sat Jun 25 15:41:44 -0700 2011
   [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 61 LIMIT 1[0m
 Rendered goals/show.html.erb within layouts/application (43.1ms)
 Completed 200 OK in 128ms (Views: 54.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 15:50:33 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:57:47 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (294.1ms)
+Completed 200 OK in 375ms (Views: 305.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Jun 25 15:57:55 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 110ms (Views: 61.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 15:57:57 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (38.2ms)
+Rendered users/edit.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 114ms (Views: 64.3ms | ActiveRecord: 1.1ms)
