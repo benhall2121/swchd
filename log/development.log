@@ -3496,3 +3496,1245 @@ Started GET "/goals/24" for 127.0.0.1 at Sat Jun 25 14:11:28 -0700 2011
   [1m[35mGoal Load (1.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 24 LIMIT 1
 Rendered goals/show.html.erb within layouts/application (40.5ms)
 Completed 200 OK in 117ms (Views: 50.3ms | ActiveRecord: 1.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:23:13 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mSQL (1.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 268ms (Views: 65.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:23:16 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (20.0ms)
+Rendered goals/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 301ms (Views: 124.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:23:20 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"123", "user_id"=>"3", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`updated_at`, `friend_id`, `title`, `created_at`, `user_id`, `deadline`) VALUES ('2011-06-25 21:23:20', NULL, '123', '2011-06-25 21:23:20', 3, NULL)
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/goals/25
+Completed 302 Found in 916ms
+
+
+Started GET "/goals/25" for 127.0.0.1 at Sat Jun 25 14:23:21 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 25 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 196ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:29:01 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mSQL (21.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 277ms (Views: 66.7ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:29:05 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (18.6ms)
+Rendered goals/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 137ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:29:08 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"sds", "user_id"=>"3", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`friend_id`, `title`, `created_at`, `user_id`, `deadline`, `updated_at`) VALUES (NULL, 'sds', '2011-06-25 21:29:09', 3, NULL, '2011-06-25 21:29:09')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 118ms
+
+LoadError (no such file to load -- rest-client):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.0ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:29:34 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (12.5ms)
+Rendered goals/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 128ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:29:36 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"sds", "user_id"=>"3", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`updated_at`, `deadline`, `title`, `created_at`, `friend_id`, `user_id`) VALUES ('2011-06-25 21:29:36', NULL, 'sds', '2011-06-25 21:29:36', NULL, 3)
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 90ms
+
+NameError (uninitialized constant GoalsController::RestClient):
+  app/controllers/goals_controller.rb:53:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.4ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:30:26 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"sds", "user_id"=>"3", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  describe `goals`
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `goals` (`updated_at`, `friend_id`, `deadline`, `created_at`, `user_id`, `title`) VALUES ('2011-06-25 21:30:26', NULL, NULL, '2011-06-25 21:30:26', 3, 'sds')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Completed 500 Internal Server Error in 168ms
+
+NameError (uninitialized constant GoalsController::RestClient):
+  app/controllers/goals_controller.rb:53:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (46.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 14:30:31 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 88ms (Views: 86.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:30:35 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 217ms (Views: 74.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:30:38 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (12.5ms)
+Rendered goals/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 124ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:30:43 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"asqw", "user_id"=>"3", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`user_id`, `deadline`, `title`, `friend_id`, `created_at`, `updated_at`) VALUES (3, NULL, 'asqw', NULL, '2011-06-25 21:30:43', '2011-06-25 21:30:43')
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 168ms
+
+NameError (uninitialized constant GoalsController::RestClient):
+  app/controllers/goals_controller.rb:53:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.4ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:31:05 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"asqw", "user_id"=>"3", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `goals`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `goals` (`title`, `updated_at`, `created_at`, `friend_id`, `user_id`, `deadline`) VALUES ('asqw', '2011-06-25 21:31:05', '2011-06-25 21:31:05', NULL, 3, NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Completed 500 Internal Server Error in 94ms
+
+LoadError (no such file to load -- rest-client):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:35:02 -0700 2011
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/Ben/desktop/work/sidework/swchd/app/controllers/application_controller.rb:1)
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"asqw", "user_id"=>"3", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  describe `goals`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `goals` (`friend_id`, `created_at`, `user_id`, `updated_at`, `deadline`, `title`) VALUES (NULL, '2011-06-25 21:35:05', 3, '2011-06-25 21:35:05', NULL, 'asqw')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/goals/31
+Completed 302 Found in 2959ms
+
+
+Started GET "/goals/31" for 127.0.0.1 at Sat Jun 25 14:35:08 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.6ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 31 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 220ms (Views: 58.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:36:09 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (79.3ms)
+Completed 200 OK in 152ms (Views: 89.7ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to AddFileToAttachedFile (20110625071254)
+Migrating to AddAttachmentImageToUser (20110625164121)
+Migrating to DropEmergencyContactsTable (20110625173014)
+Migrating to DropAttachedFilesTable (20110625173101)
+Migrating to RemoveColumnsFromUsers (20110625173824)
+Migrating to AddPhoneToUsers (20110625191244)
+Migrating to CreateFriendships (20110625194600)
+Migrating to CreateGoals (20110625201220)
+Migrating to AddDeadlineToGoals (20110625201430)
+Migrating to AddMessageToGoals (20110625213729)
+  [1m[35mSQL (94.1ms)[0m  ALTER TABLE `goals` ADD `message` varchar(255)
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110625213729')[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `friendships`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `friendships`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `goals`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:40:24 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (22.9ms)
+Rendered goals/new.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 304ms (Views: 60.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:41:21 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (19.7ms)
+Rendered goals/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 237ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:41:38 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"hahah", "user_id"=>"3", "message"=>"mesage ben", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  describe `goals`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `goals` (`friend_id`, `user_id`, `message`, `updated_at`, `created_at`, `deadline`, `title`) VALUES (NULL, 3, 'mesage ben', '2011-06-25 21:41:38', '2011-06-25 21:41:38', NULL, 'hahah')[0m
+  [1m[35mSQL (58.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 205ms
+
+URI::InvalidURIError (bad URI(is not URI?): https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=4804148157&msg=mesage ben):
+  app/controllers/goals_controller.rb:56:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:42:15 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"hahah", "user_id"=>"3", "message"=>"mesage ben", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `goals`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `goals` (`title`, `user_id`, `updated_at`, `created_at`, `friend_id`, `deadline`, `message`) VALUES ('hahah', 3, '2011-06-25 21:42:15', '2011-06-25 21:42:15', NULL, NULL, 'mesage ben')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 224ms
+
+URI::InvalidURIError (bad URI(is not URI?): https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=4804148157&msg=mesage ben):
+  app/controllers/goals_controller.rb:56:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (41.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.2ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:43:39 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"hahah", "user_id"=>"3", "message"=>"mesage ben", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `goals`
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `goals` (`friend_id`, `created_at`, `title`, `message`, `user_id`, `deadline`, `updated_at`) VALUES (NULL, '2011-06-25 21:43:39', 'hahah', 'mesage ben', 3, NULL, '2011-06-25 21:43:39')[0m
+  [1m[35mSQL (1.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 118ms
+
+URI::InvalidURIError (bad URI(is not URI?): https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=4804148157&msg=mesage ben):
+  app/controllers/goals_controller.rb:56:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (34.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.7ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:44:02 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"hahah", "user_id"=>"3", "message"=>"mesage ben", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `goals`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `goals` (`title`, `message`, `user_id`, `updated_at`, `created_at`, `deadline`, `friend_id`) VALUES ('hahah', 'mesage ben', 3, '2011-06-25 21:44:03', '2011-06-25 21:44:03', NULL, NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 125ms
+
+URI::InvalidURIError (bad URI(is not URI?): https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=4804148157&msg=mesage ben):
+  app/controllers/goals_controller.rb:57:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.8ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:45:59 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"hahah", "user_id"=>"3", "message"=>"mesage ben", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `goals`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `goals` (`updated_at`, `friend_id`, `created_at`, `title`, `user_id`, `message`, `deadline`) VALUES ('2011-06-25 21:45:59', NULL, '2011-06-25 21:45:59', 'hahah', 3, 'mesage ben', NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/goals/36
+Completed 302 Found in 2845ms
+
+
+Started GET "/goals/36" for 127.0.0.1 at Sat Jun 25 14:46:02 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 36 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 227ms (Views: 63.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:48:18 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 144ms (Views: 80.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:48:20 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (15.8ms)
+Rendered goals/new.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 225ms (Views: 40.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:48:24 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"123", "user_id"=>"3", "message"=>"123", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`created_at`, `user_id`, `updated_at`, `friend_id`, `message`, `deadline`, `title`) VALUES ('2011-06-25 21:48:24', 3, '2011-06-25 21:48:24', NULL, '123', NULL, '123')
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Redirected to http://localhost:3000/goals/37
+Completed 302 Found in 2840ms
+
+
+Started GET "/goals/37" for 127.0.0.1 at Sat Jun 25 14:48:27 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 37 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 124ms (Views: 54.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:51:22 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 159ms (Views: 88.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:51:23 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (15.4ms)
+Rendered goals/new.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 140ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:51:49 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"A new goal", "user_id"=>"3", "message"=>"1234", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `goals`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `goals` (`updated_at`, `title`, `created_at`, `deadline`, `message`, `friend_id`, `user_id`) VALUES ('2011-06-25 21:51:49', 'A new goal', '2011-06-25 21:51:49', NULL, '1234', NULL, 3)[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/goals/38
+Completed 302 Found in 2786ms
+
+
+Started GET "/goals/38" for 127.0.0.1 at Sat Jun 25 14:51:52 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 38 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 120ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:55:25 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (83.3ms)
+Completed 200 OK in 256ms (Views: 93.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:55:26 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (17.5ms)
+Rendered goals/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 140ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:55:40 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"tititltlt", "user_id"=>"3", "message"=>"memememssage", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`deadline`, `message`, `updated_at`, `created_at`, `friend_id`, `user_id`, `title`) VALUES (NULL, 'memememssage', '2011-06-25 21:55:40', '2011-06-25 21:55:40', NULL, 3, 'tititltlt')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 208ms
+
+NoMethodError (undefined method `friend' for #<Goal:0x23617b0>):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.5ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:56:53 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"tititltlt", "user_id"=>"3", "message"=>"memememssage", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`friend_id`, `user_id`, `updated_at`, `deadline`, `created_at`, `message`, `title`) VALUES (NULL, 3, '2011-06-25 21:56:53', NULL, '2011-06-25 21:56:53', 'memememssage', 'tititltlt')
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 115ms
+
+NoMethodError (undefined method `phone' for nil:NilClass):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.2ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:58:23 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"tititltlt", "user_id"=>"3", "message"=>"memememssage", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`deadline`, `friend_id`, `message`, `user_id`, `title`, `created_at`, `updated_at`) VALUES (NULL, NULL, 'memememssage', 3, 'tititltlt', '2011-06-25 21:58:23', '2011-06-25 21:58:23')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 202ms
+
+NoMethodError (undefined method `user' for nil:NilClass):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.0ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:58:47 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"tititltlt", "user_id"=>"3", "message"=>"memememssage", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `goals` (`updated_at`, `title`, `friend_id`, `deadline`, `created_at`, `user_id`, `message`) VALUES ('2011-06-25 21:58:47', 'tititltlt', NULL, NULL, '2011-06-25 21:58:47', 3, 'memememssage')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 122ms
+
+NameError (undefined local variable or method `friend_id' for #<GoalsController:0x252c0f4>):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.9ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 14:59:01 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"tititltlt", "user_id"=>"3", "message"=>"memememssage", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`message`, `created_at`, `deadline`, `user_id`, `friend_id`, `updated_at`, `title`) VALUES ('memememssage', '2011-06-25 21:59:01', NULL, 3, NULL, '2011-06-25 21:59:01', 'tititltlt')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Redirected to http://localhost:3000/goals/43
+Completed 302 Found in 5410ms
+
+
+Started GET "/goals/43" for 127.0.0.1 at Sat Jun 25 14:59:07 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 43 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 139ms (Views: 60.7ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 14:59:15 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (110.1ms)
+Completed 200 OK in 277ms (Views: 121.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 14:59:18 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (19.1ms)
+Rendered goals/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 139ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:01:32 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"ASasdasdasd", "user_id"=>"3", "message"=>"ASas", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  describe `goals`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `goals` (`updated_at`, `friend_id`, `user_id`, `deadline`, `created_at`, `message`, `title`) VALUES ('2011-06-25 22:01:32', NULL, 3, NULL, '2011-06-25 22:01:32', 'ASas', 'ASasdasdasd')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/goals/44
+Completed 302 Found in 8199ms
+
+
+Started GET "/goals/44" for 127.0.0.1 at Sat Jun 25 15:01:40 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 44 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 123ms (Views: 53.3ms | ActiveRecord: 0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:05:09 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (116.2ms)
+Completed 200 OK in 323ms (Views: 128.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:05:14 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (27.6ms)
+Rendered goals/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 239ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:05:20 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"qwerty", "user_id"=>"3", "message"=>"qwerty2", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`user_id`, `title`, `message`, `friend_id`, `deadline`, `updated_at`, `created_at`) VALUES (3, 'qwerty', 'qwerty2', NULL, NULL, '2011-06-25 22:05:20', '2011-06-25 22:05:20')
+  [1m[36mSQL (22.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 167ms
+
+NoMethodError (undefined method `phone' for nil:NilClass):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:05:42 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"qwerty", "user_id"=>"3", "message"=>"qwerty2", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (1.6ms)[0m  INSERT INTO `goals` (`title`, `friend_id`, `deadline`, `message`, `updated_at`, `user_id`, `created_at`) VALUES ('qwerty', NULL, NULL, 'qwerty2', '2011-06-25 22:05:42', 3, '2011-06-25 22:05:42')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 117ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.1ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:06:23 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"qwerty", "user_id"=>"3", "message"=>"qwerty2", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`friend_id`, `created_at`, `title`, `message`, `user_id`, `updated_at`, `deadline`) VALUES (NULL, '2011-06-25 22:06:23', 'qwerty', 'qwerty2', 3, '2011-06-25 22:06:23', NULL)
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 120ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/goals_controller.rb:51:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (83.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (127.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:07:01 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"qwerty", "user_id"=>"3", "message"=>"qwerty2", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`title`, `created_at`, `message`, `friend_id`, `updated_at`, `user_id`, `deadline`) VALUES ('qwerty', '2011-06-25 22:07:01', 'qwerty2', NULL, '2011-06-25 22:07:01', 3, NULL)
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 500 Internal Server Error in 116ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/goals_controller.rb:53:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.1ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:07:44 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"qwerty", "user_id"=>"3", "message"=>"qwerty2", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`friend_id`, `created_at`, `message`, `deadline`, `updated_at`, `title`, `user_id`) VALUES (NULL, '2011-06-25 22:07:45', 'qwerty2', NULL, '2011-06-25 22:07:45', 'qwerty', 3)
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Redirected to http://localhost:3000/goals/49
+Completed 302 Found in 6379ms
+
+
+Started GET "/goals/49" for 127.0.0.1 at Sat Jun 25 15:07:51 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 49 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 128ms (Views: 56.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:08:05 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (231.2ms)
+Completed 200 OK in 315ms (Views: 244.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:09:09 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (16.9ms)
+Rendered goals/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 136ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:09:12 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"asdf", "user_id"=>"3", "message"=>"", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  describe `goals`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `goals` (`friend_id`, `deadline`, `created_at`, `user_id`, `updated_at`, `message`, `title`) VALUES (NULL, NULL, '2011-06-25 22:09:12', 3, '2011-06-25 22:09:12', '', 'asdf')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/goals/50
+Completed 302 Found in 5618ms
+
+
+Started GET "/goals/50" for 127.0.0.1 at Sat Jun 25 15:09:18 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 50 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 129ms (Views: 55.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:11:20 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (246.2ms)
+Completed 200 OK in 326ms (Views: 256.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:11:22 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (17.5ms)
+Rendered goals/new.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 145ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:11:25 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"asdasd", "user_id"=>"3", "message"=>"", "friend_id"=>""}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (1.4ms)[0m  INSERT INTO `goals` (`user_id`, `deadline`, `friend_id`, `title`, `created_at`, `updated_at`, `message`) VALUES (3, NULL, NULL, 'asdasd', '2011-06-25 22:11:25', '2011-06-25 22:11:25', '')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Redirected to http://localhost:3000/goals/51
+Completed 302 Found in 5432ms
+
+
+Started GET "/goals/51" for 127.0.0.1 at Sat Jun 25 15:11:30 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (1.5ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 51 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 127ms (Views: 52.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:11:46 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (236.9ms)
+Completed 200 OK in 319ms (Views: 247.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:11:49 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (16.5ms)
+Rendered goals/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 139ms (Views: 40.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:11:54 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"1234", "user_id"=>"3", "message"=>"", "friend_id"=>"3"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  describe `goals`
+  [1m[36mAREL (0.8ms)[0m  [1mINSERT INTO `goals` (`user_id`, `deadline`, `message`, `created_at`, `title`, `friend_id`, `updated_at`) VALUES (3, NULL, '', '2011-06-25 22:11:54', '1234', 3, '2011-06-25 22:11:54')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/goals/52
+Completed 302 Found in 5310ms
+
+
+Started GET "/goals/52" for 127.0.0.1 at Sat Jun 25 15:12:00 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 52 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 227ms (Views: 54.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:12:14 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (154.7ms)
+Completed 200 OK in 235ms (Views: 165.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:12:17 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (17.4ms)
+Rendered goals/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 152ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:12:20 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"123", "user_id"=>"3", "message"=>"", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`updated_at`, `deadline`, `title`, `created_at`, `friend_id`, `message`, `user_id`) VALUES ('2011-06-25 22:12:21', NULL, '123', '2011-06-25 22:12:21', 1, '', 3)
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/goals/53
+Completed 302 Found in 5843ms
+
+
+Started GET "/goals/53" for 127.0.0.1 at Sat Jun 25 15:12:26 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 53 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 218ms (Views: 55.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:17:57 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (161.1ms)
+Completed 200 OK in 240ms (Views: 171.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:18:00 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (17.5ms)
+Rendered goals/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 152ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:18:05 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"asdasd", "user_id"=>"3", "message"=>"", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`friend_id`, `user_id`, `deadline`, `created_at`, `updated_at`, `title`, `message`) VALUES (1, 3, NULL, '2011-06-25 22:18:05', '2011-06-25 22:18:05', 'asdasd', '')
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 3))
+Redirected to http://localhost:3000/goals/54
+Completed 302 Found in 5495ms
+
+
+Started GET "/goals/54" for 127.0.0.1 at Sat Jun 25 15:18:11 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 54 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 158ms (Views: 63.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:20:19 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (247.0ms)
+Completed 200 OK in 325ms (Views: 257.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:20:22 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (17.0ms)
+Rendered goals/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 146ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:20:30 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"123123", "user_id"=>"3", "message"=>"1234 message", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  describe `goals`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `goals` (`title`, `created_at`, `updated_at`, `friend_id`, `message`, `deadline`, `user_id`) VALUES ('123123', '2011-06-25 22:20:30', '2011-06-25 22:20:30', 1, '1234 message', NULL, 3)[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 3))[0m
+Redirected to http://localhost:3000/goals/55
+Completed 302 Found in 5627ms
+
+
+Started GET "/goals/55" for 127.0.0.1 at Sat Jun 25 15:20:36 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 55 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 127ms (Views: 55.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 15:21:33 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mFriendship Load (0.5ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))
+Rendered users/show.html.erb within layouts/application (172.9ms)
+Completed 200 OK in 234ms (Views: 183.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Jun 25 15:21:38 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 129ms (Views: 78.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/friendships?friend_id=2" for 127.0.0.1 at Sat Jun 25 15:21:42 -0700 2011
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "friend_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `friendships`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `friendships` (`user_id`, `updated_at`, `friend_id`, `created_at`) VALUES (3, '2011-06-25 22:21:42', 2, '2011-06-25 22:21:42')
+  [1m[36mSQL (149.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 261ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 15:21:42 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (181.2ms)
+Completed 200 OK in 193ms (Views: 192.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Jun 25 15:21:48 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 113ms (Views: 60.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/friendships?friend_id=3" for 127.0.0.1 at Sat Jun 25 15:21:49 -0700 2011
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "friend_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `friendships`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `friendships` (`friend_id`, `user_id`, `updated_at`, `created_at`) VALUES (3, 3, '2011-06-25 22:21:50', '2011-06-25 22:21:50')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 15:21:50 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Jun 25 15:22:19 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 109ms (Views: 58.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/friendships?friend_id=1" for 127.0.0.1 at Sat Jun 25 15:22:22 -0700 2011
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "friend_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `friendships`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `friendships` (`updated_at`, `friend_id`, `user_id`, `created_at`) VALUES ('2011-06-25 22:22:23', 1, 3, '2011-06-25 22:22:23')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 15:22:23 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 91ms (Views: 89.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:23:09 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (169.5ms)
+Completed 200 OK in 330ms (Views: 261.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:23:12 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (15.5ms)
+Rendered goals/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 135ms (Views: 39.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:23:26 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"this is a title", "user_id"=>"3", "message"=>"anad a message", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  describe `goals`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `goals` (`friend_id`, `updated_at`, `title`, `message`, `deadline`, `user_id`, `created_at`) VALUES (1, '2011-06-25 22:23:26', 'this is a title', 'anad a message', NULL, 3, '2011-06-25 22:23:26')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 3861ms
+
+NoMethodError (undefined method `friendship' for "#<User:0x26f2a14>":User):
+  app/controllers/goals_controller.rb:64:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (34.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.6ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:24:08 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"this is a title", "user_id"=>"3", "message"=>"anad a message", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `goals` (`user_id`, `deadline`, `updated_at`, `message`, `created_at`, `title`, `friend_id`) VALUES (3, NULL, '2011-06-25 22:24:08', 'anad a message', '2011-06-25 22:24:08', 'this is a title', 1)
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 3))
+Redirected to http://localhost:3000/goals/57
+Completed 302 Found in 8814ms
+
+
+Started GET "/goals/57" for 127.0.0.1 at Sat Jun 25 15:24:18 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 57 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 229ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:25:29 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (182.2ms)
+Completed 200 OK in 264ms (Views: 193.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:25:32 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (15.7ms)
+Rendered goals/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 144ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:25:43 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"again", "user_id"=>"3", "message"=>"agaim message", "friend_id"=>"3"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `goals`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `goals` (`user_id`, `message`, `title`, `created_at`, `deadline`, `friend_id`, `updated_at`) VALUES (3, 'agaim message', 'again', '2011-06-25 22:25:44', NULL, 3, '2011-06-25 22:25:44')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 3))[0m
+Redirected to http://localhost:3000/goals/58
+Completed 302 Found in 8207ms
+
+
+Started GET "/goals/58" for 127.0.0.1 at Sat Jun 25 15:25:52 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"58"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 58 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 128ms (Views: 53.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:37:52 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals`[0m
+Rendered goals/index.html.erb within layouts/application (272.5ms)
+Completed 200 OK in 356ms (Views: 283.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:37:55 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/_form.html.erb (16.8ms)
+Rendered goals/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 144ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:38:03 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"1234", "user_id"=>"3", "message"=>"22", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`deadline`, `updated_at`, `message`, `created_at`, `friend_id`, `title`, `user_id`) VALUES (NULL, '2011-06-25 22:38:03', '22', '2011-06-25 22:38:03', 1, '1234', 3)
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 3))
+Completed 500 Internal Server Error in 2851ms
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/goals_controller.rb:66:in `+'
+  app/controllers/goals_controller.rb:66:in `create'
+  app/controllers/goals_controller.rb:65:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.6ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:39:59 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"1234", "user_id"=>"3", "message"=>"22", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (1.7ms)[0m  INSERT INTO `goals` (`updated_at`, `created_at`, `deadline`, `user_id`, `title`, `friend_id`, `message`) VALUES ('2011-06-25 22:39:59', '2011-06-25 22:39:59', NULL, 3, '1234', 1, '22')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 3))
+Redirected to http://localhost:3000/goals/60
+Completed 302 Found in 7979ms
+
+
+Started GET "/goals/60" for 127.0.0.1 at Sat Jun 25 15:40:07 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 60 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 233ms (Views: 57.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sat Jun 25 15:41:24 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals`
+Rendered goals/index.html.erb within layouts/application (200.5ms)
+Completed 200 OK in 283ms (Views: 211.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sat Jun 25 15:41:27 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/_form.html.erb (15.2ms)
+Rendered goals/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 142ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sat Jun 25 15:41:33 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"asdasd", "user_id"=>"3", "message"=>"asdas", "friend_id"=>"1"}, "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  describe `goals`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `goals` (`friend_id`, `updated_at`, `user_id`, `message`, `deadline`, `title`, `created_at`) VALUES (1, '2011-06-25 22:41:33', 3, 'asdas', NULL, 'asdasd', '2011-06-25 22:41:33')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 3))[0m
+Redirected to http://localhost:3000/goals/61
+Completed 302 Found in 11248ms
+
+
+Started GET "/goals/61" for 127.0.0.1 at Sat Jun 25 15:41:44 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 61 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 128ms (Views: 54.5ms | ActiveRecord: 0.6ms)

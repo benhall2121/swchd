@@ -46,13 +46,28 @@ class GoalsController < ApplicationController
 
     respond_to do |format|
       if @goal.save
-      	      
-      	require 'net/https'
-      	url = URI.parse("https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=4804148157&msg=this+is+a+test+message+from+carrot+dangle2134")
-	request = Net::HTTP::Post.new(url.path,{"Content-Type"=>"text/xml"})
-	http = Net::HTTP.new(url.host, url.port)
-	http.use_ssl = true
-	response = http.start {|http| http.request(request) }
+      	
+      	user_name = @goal.user.first_name + ' ' + @goal.user.last_name
+      	title = @goal.title
+      	mes = @goal.message
+      	goal_friend_phone = @goal.friend.phone
+      	randnum = rand(10000).to_s;
+      	
+      	# Message for accountability agent
+      	if goal_friend_phone
+          message = 'Will you be my ('+ user_name + ') accountability agent on DangleCarrot.com for my new goal: ' + title     
+      	  phone = goal_friend_phone
+       	  url = 'https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=' + phone + '&msg=' + message
+      	  response = RestClient.get URI.encode(url)   
+        end
+      	  
+      	# Message for carrots
+      	@goal.user.friends.each do |user|
+      	  message = 'Dangle a Carrot for ' + user_name + ' on DangleCarrot.com: ' + mes + ' ref#: ' + randnum      
+      	  phone = user.phone
+      	  url = 'https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=' + phone + '&msg=' + message
+      	  response = RestClient.get URI.encode(url)
+        end
 	
       	format.html { redirect_to(@goal, :notice => 'Goal was successfully created.') }
         format.xml  { render :xml => @goal, :status => :created, :location => @goal }

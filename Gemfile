@@ -9,6 +9,7 @@ gem 'mysql2', '< 0.3'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'mongrel'
 gem 'paperclip'
+gem 'rest-client'
 
 # Use unicorn as the web server
 # gem 'unicorn'
