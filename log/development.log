@@ -1158,3 +1158,65 @@ Started GET "/emergency_contacts/2" for 127.0.0.1 at Fri Jun 24 23:32:14 -0700 2
   [1m[36mEmergencyContact Load (0.3ms)[0m  [1mSELECT `emergency_contacts`.* FROM `emergency_contacts` WHERE `emergency_contacts`.`id` = 2 LIMIT 1[0m
 Rendered emergency_contacts/show.html.erb within layouts/application (53.1ms)
 Completed 200 OK in 111ms (Views: 62.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/emergency_contacts/2" for 127.0.0.1 at Fri Jun 24 23:38:53 -0700 2011
+  Processing by EmergencyContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mEmergencyContact Load (0.3ms)[0m  [1mSELECT `emergency_contacts`.* FROM `emergency_contacts` WHERE `emergency_contacts`.`id` = 2 LIMIT 1[0m
+Rendered emergency_contacts/show.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 113ms (Views: 66.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Fri Jun 24 23:38:54 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Jun 24 23:38:55 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Fri Jun 24 23:38:56 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (36.4ms)
+Rendered users/new.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 87ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri Jun 24 23:39:09 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"benhall212134@yahoo.com"}}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212134@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `users`
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `users` (`first_name`, `dob`, `phone`, `created_at`, `blood_type`, `state`, `notes`, `email`, `updated_at`, `password_salt`, `address`, `city`, `password_hash`, `last_name`, `sex`) VALUES (NULL, NULL, NULL, '2011-06-25 06:39:10', NULL, NULL, NULL, 'benhall212134@yahoo.com', '2011-06-25 06:39:10', '$2a$10$TDzwXvpjZ1dTKBah5FHKbu', NULL, NULL, '$2a$10$TDzwXvpjZ1dTKBah5FHKbuwiiHiif75CvMDCavw/mBgaJ8r/EZBja', NULL, NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Jun 24 23:39:10 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Fri Jun 24 23:39:20 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[36mUser Load (10.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/emergency_contacts
+Completed 302 Found in 275ms
+
+
+Started GET "/emergency_contacts" for 127.0.0.1 at Fri Jun 24 23:39:20 -0700 2011
+  Processing by EmergencyContactsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mEmergencyContact Load (0.3ms)[0m  [1mSELECT `emergency_contacts`.* FROM `emergency_contacts`[0m
+Rendered emergency_contacts/index.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 400ms (Views: 82.5ms | ActiveRecord: 0.8ms)
