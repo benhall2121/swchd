@@ -1701,3 +1701,699 @@ Started GET "/attached_files" for 127.0.0.1 at Sat Jun 25 00:32:24 -0700 2011
   [1m[35mAttachedFile Load (0.3ms)[0m  SELECT `attached_files`.* FROM `attached_files`
 Rendered attached_files/index.html.erb within layouts/application (149.6ms)
 Completed 200 OK in 212ms (Views: 160.0ms | ActiveRecord: 0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 09:14:50 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (76.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (310.9ms)
+Completed 200 OK in 378ms (Views: 300.1ms | ActiveRecord: 76.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Jun 25 09:15:12 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 298ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:15:13 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 132ms (Views: 96.2ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to CreateEmergencyContacts (20110625060106)
+Migrating to CreateAttachedFiles (20110625065714)
+Migrating to AddFileToAttachedFile (20110625071254)
+Migrating to AddImageToUsers (20110625161747)
+  [1m[35mSQL (472.2ms)[0m  ALTER TABLE `users` ADD `image_file_name` varchar(255)
+  [1m[36mSQL (105.9ms)[0m  [1mALTER TABLE `users` ADD `image_content_type` varchar(255)[0m
+  [1m[35mSQL (141.6ms)[0m  ALTER TABLE `users` ADD `image_file_size` varchar(255)
+  [1m[36mSQL (132.6ms)[0m  [1mALTER TABLE `users` ADD `image_updated_at` datetime[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110625161747')
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.4ms)[0m  describe `attached_files`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `attached_files`[0m
+  [1m[35mSQL (1.4ms)[0m  describe `emergency_contacts`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `emergency_contacts`[0m
+  [1m[35mSQL (1.9ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 09:28:26 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (122.7ms)
+Rendered users/edit.html.erb within layouts/application (146.0ms)
+Completed 200 OK in 221ms (Views: 179.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 09:28:35 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>"IMG_0113.JPG", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: photo
+  [1m[36mSQL (65.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 272ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:28:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 102ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:28:36 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 09:29:12 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (59.8ms)
+Rendered users/edit.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 263ms (Views: 87.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 09:29:36 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "id"=>"1", "user"=>{"photo"=>"SN853295.JPG", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: photo
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 187ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:29:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 101ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:29:37 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 09:30:39 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (49.8ms)
+Rendered users/edit.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 117ms (Views: 75.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 09:30:53 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "image"=>"IMG_0669.JPG", "email"=>"benhall2121@yahoo.com"}}
+  [1m[36mUser Load (5.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: image
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 209ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:30:53 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (100.4ms)
+Completed 200 OK in 227ms (Views: 118.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:30:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:31:20 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 208ms (Views: 66.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:31:22 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 09:31:24 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (55.8ms)
+Rendered users/edit.html.erb within layouts/application (71.4ms)
+Completed 200 OK in 200ms (Views: 83.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 09:31:37 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "image"=>"SN853303.JPG", "email"=>"benhall2121@yahoo.com"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: image
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 114ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:31:37 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 103ms (Views: 60.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:31:37 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:32:47 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 209ms (Views: 66.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:32:48 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 09:33:06 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (55.7ms)
+Rendered users/edit.html.erb within layouts/application (70.3ms)
+Completed 200 OK in 195ms (Views: 82.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 09:33:52 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "image"=>"IMG_0067.JPG", "email"=>"benhall2121@yahoo.com"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: image
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 112ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:33:52 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 100ms (Views: 59.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:33:53 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:42:09 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 177ms (Views: 62.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:42:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 09:42:12 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (53.2ms)
+Rendered users/edit.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 137ms (Views: 95.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 09:42:19 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "image"=>"IMG_0066.JPG", "email"=>"benhall2121@yahoo.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: image
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 91ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:42:19 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 124ms (Views: 82.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:42:20 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+  [1m[36mSQL (47.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to CreateEmergencyContacts (20110625060106)
+Migrating to CreateAttachedFiles (20110625065714)
+Migrating to AddFileToAttachedFile (20110625071254)
+Migrating to AddImageToUsers (20110625161747)
+Migrating to AddAttachmentImageToUser (20110625164121)
+  [1m[35mSQL (0.6ms)[0m  ALTER TABLE `users` ADD `image_file_name` varchar(255)
+Mysql2::Error: Duplicate column name 'image_file_name': ALTER TABLE `users` ADD `image_file_name` varchar(255)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to AddImageToUsers (20110625161747)
+  [1m[35mSQL (133.1ms)[0m  ALTER TABLE `users` DROP `image_file_name`
+  [1m[36mSQL (264.2ms)[0m  [1mALTER TABLE `users` DROP `image_content_type`[0m
+  [1m[35mSQL (131.0ms)[0m  ALTER TABLE `users` DROP `image_file_size`
+  [1m[36mSQL (142.7ms)[0m  [1mALTER TABLE `users` DROP `image_updated_at`[0m
+  [1m[35mAREL (1.0ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110625161747'
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.4ms)[0m  describe `attached_files`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `attached_files`[0m
+  [1m[35mSQL (1.3ms)[0m  describe `emergency_contacts`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `emergency_contacts`[0m
+  [1m[35mSQL (1.8ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to CreateEmergencyContacts (20110625060106)
+Migrating to CreateAttachedFiles (20110625065714)
+Migrating to AddFileToAttachedFile (20110625071254)
+Migrating to AddAttachmentImageToUser (20110625164121)
+  [1m[35mSQL (110.3ms)[0m  ALTER TABLE `users` ADD `image_file_name` varchar(255)
+  [1m[36mSQL (280.9ms)[0m  [1mALTER TABLE `users` ADD `image_content_type` varchar(255)[0m
+  [1m[35mSQL (297.3ms)[0m  ALTER TABLE `users` ADD `image_file_size` int(11)
+  [1m[36mSQL (162.8ms)[0m  [1mALTER TABLE `users` ADD `image_updated_at` datetime[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110625164121')
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.5ms)[0m  describe `attached_files`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `attached_files`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `emergency_contacts`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `emergency_contacts`[0m
+  [1m[35mSQL (1.8ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:50:05 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 229ms (Views: 66.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:50:07 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sat Jun 25 09:50:18 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (164.6ms)
+Rendered users/edit.html.erb within layouts/application (180.8ms)
+Completed 200 OK in 302ms (Views: 191.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sat Jun 25 09:50:30 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"OVijVWDzY0N9u8Y9hAHOV7aeZ9xRxIcwtF1ov4eY8+U=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "image"=>"IMG_0066.JPG", "email"=>"benhall2121@yahoo.com"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: image
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 380ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 09:50:30 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 102ms (Views: 60.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/small/missing.png" for 127.0.0.1 at Sat Jun 25 09:50:31 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+  [1m[36mSQL (51.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to AddFileToAttachedFile (20110625071254)
+Migrating to AddAttachmentImageToUser (20110625164121)
+Migrating to DropEmergencyContactsTable (20110625173014)
+  [1m[35mSQL (18.1ms)[0m  DROP TABLE `emergency_contacts`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110625173014')[0m
+Migrating to DropAttachedFilesTable (20110625173101)
+  [1m[35mSQL (1.8ms)[0m  DROP TABLE `attached_files`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110625173101')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110625053432)
+Migrating to AddFileToAttachedFile (20110625071254)
+Migrating to AddAttachmentImageToUser (20110625164121)
+Migrating to DropEmergencyContactsTable (20110625173014)
+Migrating to DropAttachedFilesTable (20110625173101)
+Migrating to RemoveColumnsFromUsers (20110625173824)
+  [1m[35mSQL (93.2ms)[0m  ALTER TABLE `users` DROP `phone`
+  [1m[36mSQL (178.2ms)[0m  [1mALTER TABLE `users` DROP `address`[0m
+  [1m[35mSQL (119.6ms)[0m  ALTER TABLE `users` DROP `city`
+  [1m[36mSQL (109.8ms)[0m  [1mALTER TABLE `users` DROP `state`[0m
+  [1m[35mSQL (120.5ms)[0m  ALTER TABLE `users` DROP `dob`
+  [1m[36mSQL (120.2ms)[0m  [1mALTER TABLE `users` DROP `sex`[0m
+  [1m[35mSQL (131.9ms)[0m  ALTER TABLE `users` DROP `blood_type`
+  [1m[36mSQL (121.7ms)[0m  [1mALTER TABLE `users` DROP `notes`[0m
+  [1m[35mSQL (120.2ms)[0m  ALTER TABLE `users` DROP `image_file_name`
+  [1m[36mSQL (121.0ms)[0m  [1mALTER TABLE `users` DROP `image_content_type`[0m
+  [1m[35mSQL (119.7ms)[0m  ALTER TABLE `users` DROP `image_file_size`
+  [1m[36mSQL (121.0ms)[0m  [1mALTER TABLE `users` DROP `image_updated_at`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110625173824')
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.4ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 11:25:24 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 11:25:26 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Jun 25 11:25:35 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 385ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 11:25:36 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (41.7ms)
+Completed 500 Internal Server Error in 154ms
+
+ActionView::Template::Error (undefined method `phone' for #<User:0x23775b0>):
+    17: 
+    18: <p>
+    19:   <b>Phone:</b>
+    20:   <%= @user.phone %>
+    21: </p>
+    22: 
+    23: <p>
+  app/views/users/show.html.erb:20:in `_app_views_users_show_html_erb__670531095_20165750_0'
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 11:26:07 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined method `phone' for #<User:0x252f128>):
+    17: 
+    18: <p>
+    19:   <b>Phone:</b>
+    20:   <%= @user.phone %>
+    21: </p>
+    22: 
+    23: 
+  app/views/users/show.html.erb:20:in `_app_views_users_show_html_erb__670531095_19486830_0'
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 11:26:16 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (39.7ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (undefined local variable or method `attached_files_path' for #<#<Class:0x23ad214>:0x23a8804>):
+    23: 
+    24: <%= link_to 'Edit', edit_user_path(@user) %> |
+    25: <%= link_to 'Back', users_path %> |
+    26: <%= link_to 'Attached File', attached_files_path %> |
+    27: <%= link_to 'Emergency Contacts', emergency_contacts_path %>
+  app/views/users/show.html.erb:26:in `_app_views_users_show_html_erb__670531095_18685430_0'
+  app/controllers/users_controller.rb:19:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sat Jun 25 11:26:29 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 71ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Jun 25 11:27:13 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (29.2ms)
+Completed 500 Internal Server Error in 89ms
+
+ActionView::Template::Error (undefined method `phone' for #<User:0x24c7e60>):
+    27:     <td><%= user.password_salt %></td>
+    28:     <td><%= user.first_name %></td>
+    29:     <td><%= user.last_name %></td>
+    30:     <td><%= user.phone %></td>
+    31:     <td><%= user.address %></td>
+    32:     <td><%= user.city %></td>
+    33:     <td><%= user.state %></td>
+  app/views/users/index.html.erb:30:in `_app_views_users_index_html_erb__782069920_19275270_0'
+  app/views/users/index.html.erb:23:in `each'
+  app/views/users/index.html.erb:23:in `_app_views_users_index_html_erb__782069920_19275270_0'
+  app/controllers/users_controller.rb:8:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sat Jun 25 11:27:52 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 157ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sat Jun 25 11:27:55 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 11:27:55 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sat Jun 25 11:27:58 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (104.4ms)
+Rendered users/new.html.erb within layouts/application (122.8ms)
+Completed 200 OK in 172ms (Views: 142.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Jun 25 11:28:11 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"benhall212177@yahoo.com"}}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall212177@yahoo.com') LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `users` (`updated_at`, `email`, `password_hash`, `password_salt`, `created_at`, `first_name`, `last_name`) VALUES ('2011-06-25 18:28:11', 'benhall212177@yahoo.com', '$2a$10$y5C8DZbDZUizyaD1wA5t/uLcSe5N4BbfBB8s0bn7AU2Ey5SNwUGdi', '$2a$10$y5C8DZbDZUizyaD1wA5t/u', '2011-06-25 18:28:11', NULL, NULL)
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 288ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 25 11:28:11 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sat Jun 25 11:28:22 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall212177@yahoo.com"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall212177@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 223ms
+
+
+Started GET "/users/3" for 127.0.0.1 at Sat Jun 25 11:28:22 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered users/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 72ms (Views: 38.3ms | ActiveRecord: 0.3ms)

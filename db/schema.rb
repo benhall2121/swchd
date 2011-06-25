@@ -10,29 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110625071254) do
-
-  create_table "attached_files", :force => true do |t|
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "file_file_name"
-    t.string   "file_content_type"
-    t.string   "file_file_size"
-    t.datetime "file_updated_at"
-  end
-
-  create_table "emergency_contacts", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "address"
-    t.string   "relationship"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20110625173824) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
@@ -40,14 +18,6 @@ ActiveRecord::Schema.define(:version => 20110625071254) do
     t.string   "password_salt"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "phone"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "dob"
-    t.string   "sex"
-    t.string   "blood_type"
-    t.string   "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

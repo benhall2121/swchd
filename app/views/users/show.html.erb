@@ -17,47 +17,10 @@
 
 <p>
   <b>Phone:</b>
-  <%= @user.phone %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @user.address %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @user.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @user.state %>
-</p>
-
-<p>
-  <b>Dob:</b>
-  <%= @user.dob %>
-</p>
-
-<p>
-  <b>Sex:</b>
-  <%= @user.sex %>
-</p>
-
-<p>
-  <b>Blood type:</b>
-  <%= @user.blood_type %>
-</p>
-
-<p>
-  <b>Notes:</b>
-  <%= @user.notes %>
+  <%#= @user.phone %>
 </p>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %> |
-<%= link_to 'Attached File', attached_files_path %> |
-<%= link_to 'Emergency Contacts', emergency_contacts_path %>
+<%= link_to 'Back', users_path %> 
 

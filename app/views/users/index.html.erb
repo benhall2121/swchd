@@ -8,13 +8,6 @@
     <th>First name</th>
     <th>Last name</th>
     <th>Phone</th>
-    <th>Address</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Dob</th>
-    <th>Sex</th>
-    <th>Blood type</th>
-    <th>Notes</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,14 +20,7 @@
     <td><%= user.password_salt %></td>
     <td><%= user.first_name %></td>
     <td><%= user.last_name %></td>
-    <td><%= user.phone %></td>
-    <td><%= user.address %></td>
-    <td><%= user.city %></td>
-    <td><%= user.state %></td>
-    <td><%= user.dob %></td>
-    <td><%= user.sex %></td>
-    <td><%= user.blood_type %></td>
-    <td><%= user.notes %></td>
+    <td><%#= user.phone %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
