@@ -63,10 +63,12 @@ class GoalsController < ApplicationController
       	  
       	# Message for carrots
       	@goal.user.friends.each do |user|
+         if user.phone	
       	  message = 'Dangle a Carrot for ' + user_name + ' on DangleCarrot.com: ' + mes + ' ref#: ' + randnum      
       	  phone = user.phone
       	  url = 'https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=' + phone + '&msg=' + message
       	  response = RestClient.get URI.encode(url)
+         end
         end
 	
       	format.html { redirect_to(@goal, :notice => 'Goal was successfully created.') }

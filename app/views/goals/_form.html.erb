@@ -20,7 +20,7 @@
   </div>
   <div class="field">
     <%= f.label :friend_id %><br />
-    <%= f.text_field :friend_id %>
+    <%= f.select :friend_id, current_user.friends.collect {|user| [ user.first_name + ' ' + user.last_name, user.id ] } %>
   </div>
   <div class="field">
     <%= f.label :message %><br />

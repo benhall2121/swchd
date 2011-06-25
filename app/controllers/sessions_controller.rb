@@ -2,6 +2,10 @@ class SessionsController < ApplicationController
   skip_before_filter :require_login, :only => [:new, :destroy, :create]	
   
   def new
+    if current_user	 
+      redirect_to user_path(current_user)	    
+      return
+    end	  
   end
 
   def create
