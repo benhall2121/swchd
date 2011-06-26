@@ -12,27 +12,42 @@
 </head>
 <body>
 
-<div id="user_nav">
+
+<div class="top">
+  
   <% if current_user %>
-  <%= link_to (image_tag "logoSmall.png"), root_path() %>
-    <%= link_to "Log out", log_out_path %>
-    <%= link_to 'Home', root_path %>
-    <%= link_to 'Goals', goals_path %>
-    <%= link_to 'find friends', users_path %>
-    <%= link_to 'carrots', carrots_path %>
+  <div id="user_nav">
+   <div id="login_user_nav">
+    <div class="logo"><%= link_to (image_tag "logoSmall.gif"), root_path() %></div>
+    <div><%= link_to 'Goals', goals_path %></div>
+    <div><%= link_to 'find friends', users_path %></div>
+    <div><%= link_to 'carrots', carrots_path %></div>
+    <!-- <div id='logout'><%= link_to (image_tag "logout.gif"), log_out_path %></div> -->
+    
+                     <div id="header_box_right">
+			<span><a href="/log_out">
+			  <%= image_tag("logout.gif", :width=>"133", :height=>"30" ) %></a></span>
+			<span><a href="#">
+			  <%= image_tag("top_02.gif", :width=>"30", :height=>"30" ) %></a></span>
+			<span><a href="#">
+			  <%= image_tag("top_03.gif", :width=>"28", :height=>"30" ) %></a></span>
+		     </div>
+    
+   </div>
+  </div>
+   
+   
+   <div id="box">
+    <%= yield %>
+   </div>
+   
   <% else %>
     <%#= link_to "Sign up", sign_up_path %>
     <%#= link_to "log in", log_in_path %>
+    <%= yield %>
   <% end %>
 </div>
 
-<% if current_user %>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" %>
-  <% end %>
-<% end %>
-
-<%= yield %>
 
 </body>
 </html>

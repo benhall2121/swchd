@@ -24,6 +24,11 @@ class CarrotsController < ApplicationController
 
   def goal_finished
     @carrot = Carrot.find(params[:id]) 
+    
+    if @carrot.goal.nil?
+    	    return false    
+    end
+    
     if !@carrot.goal.finished
     	    redirect_to root_path	 
     return false    

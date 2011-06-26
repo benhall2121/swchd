@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<% if @carrot.goal %>
 <p>
   <b>Goal:</b>
   <%= @carrot.goal.title %>
 </p>
+<% end %>
 <!--
 <p>
   <b>Friend:</b>
