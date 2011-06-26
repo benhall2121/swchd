@@ -1,4 +1,10 @@
-<%= image_tag @user.photo.url(:small) %><h2>Current Goals</h2>
+<div class="user_div">
+<h1><%= @user.first_name %></h1>
+<div class="user_picture">
+ <%= image_tag @user.photo.url(:small) %>
+</div>
+<div class="user_goals">
+<h2><%= @user.first_name %> Goals</h2>
 <ul>
   <% @user.goals.each do |goal| %>
     <li><%= link_to goal.title, goal_path(goal) %>
@@ -23,14 +29,25 @@
     </ul> 
   <% end %>
 </ul>
+</div>
+</div>
 
-<h2>Friends</h2>
-<ul>
+<div>
+<div class="friends_h1"><span><h1>Friends</h1></span> <span><%= link_to "Find Friends", users_path %></span></div>
+
   <% for friendship in @user.friendships %>
+  <div class="user_div">
+  <div class="user_picture">
+   <%= image_tag friendship.friend.photo.url(:small) %>
+  </div>
+  <div class="user_goals">
+  <h2><%= friendship.friend.first_name %> Goals</h2>
+  <ul>
     <li>
       <%= link_to friendship.friend.email, user_path(friendship.friend) %>
       (<%= link_to "remove", friendship, :method => :delete %>)
     </li>
+    
     <ul>
       <% friendship.friend.goals.each do |a| %>
         <li>
@@ -38,15 +55,28 @@
         </li>
       <% end %>
     </ul>
-  <% end %>
+  
 </ul>
+</div>
+</div>
+  <% end %>
 
-<p><%= link_to "Find Friends", users_path %></p>
+</div>
 
-<h2>Friended by Users</h2>
-<ul>
+<div>
+<h1>Friended by Users</h1>
   <% for user in @user.inverse_friends %>
+  <div class="user_div">
+  <div class="user_picture">
+   <%= image_tag user.photo.url(:small) %>
+  </div>
+  <div class="user_goals">
+  <h2><%= user.first_name %> Goals</h2>
+  <ul>
   <li><%= link_to user.email, user_path(user) %> <% if !already_friends(user.id) %><%= link_to 'Add as a Friend', friendships_path(:friend_id => user), :method => :post %><% end %></li>
+  </ul>
+  </div>
+  </div>
   <% end %>
-</ul>
+</div>
 

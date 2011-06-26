@@ -12,6 +12,11 @@
 </head>
 <body>
 
+<% if current_user %>
+ <div class="back2">
+<% else %>
+ <div class="back">
+<% end %>
 
 <div class="top">
   
@@ -19,9 +24,9 @@
   <div id="user_nav">
    <div id="login_user_nav">
     <div class="logo"><%= link_to (image_tag "logoSmall.gif"), root_path() %></div>
-    <div><%= link_to 'Goals', goals_path %></div>
-    <div><%= link_to 'find friends', users_path %></div>
-    <div><%= link_to 'carrots', carrots_path %></div>
+    <div>&nbsp<%= link_to 'Goals', goals_path %> | </div>
+    <div>&nbsp<%= link_to 'find friends', users_path %> | </div>
+    <div>&nbsp<%= link_to 'carrots', carrots_path %></div>
     <!-- <div id='logout'><%= link_to (image_tag "logout.gif"), log_out_path %></div> -->
     
                      <div id="header_box_right">
@@ -48,6 +53,6 @@
   <% end %>
 </div>
 
-
+</div>
 </body>
 </html>

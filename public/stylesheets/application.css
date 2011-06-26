@@ -3,10 +3,25 @@ img{
  padding:0px;
  display: block
 }
-body{background-image: url('../images/back.gif');
+body{
  margin:0px;
  padding:0px;
  font-family: 'Gill Sans', Arial, Helvetica, sans-serif;
+ background-color:#7B9421;
+}
+
+.back{
+ background-image: url('../images/back.gif');
+ margin:0px;
+ padding:0px;
+ background-color:#859e2a;
+}
+
+.back2{
+ background-image: url('../images/back2.gif');
+ margin:0px;
+ padding:0px;
+ background-color:#859e2a;
 }
 
 #login_user_nav{
@@ -50,4 +65,19 @@ div#header_box_right span{
 	background-image: url('images/back2.gif'); 
 }
 
+.user_div div{
+ display:inline-block;	
+ padding:10px;
+}
 
+.user_picture{
+ float:left;	
+}
+
+.user_goals{
+ height:150px;	
+}
+
+.friends_h1 span{
+ display:inline-block;	
+}
