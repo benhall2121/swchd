@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110626004921) do
+ActiveRecord::Schema.define(:version => 20110626145935) do
 
   create_table "carrots", :force => true do |t|
     t.integer  "goal_id"
@@ -37,8 +37,9 @@ ActiveRecord::Schema.define(:version => 20110626004921) do
     t.integer  "friend_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "deadline"
+    t.datetime "deadline"
     t.string   "message"
+    t.boolean  "finished"
   end
 
   create_table "users", :force => true do |t|

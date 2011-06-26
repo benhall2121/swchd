@@ -7,19 +7,20 @@
     <th>Title</th>
     <th>Media</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @carrots.each do |carrot| %>
   <tr>
-    <td><%= carrot.goal_id %></td>
-    <td><%= carrot.friend_id %></td>
+    <td><%= carrot.goal.title %></td>
+    <td><%= carrot.friend.first_name %></td>
     <td><%= carrot.title %></td>
-    <td><%= carrot.media %></td>
-    <td><%= link_to 'Show', carrot %></td>
-    <td><%= link_to 'Edit', edit_carrot_path(carrot) %></td>
-    <td><%= link_to 'Destroy', carrot, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if is_goal_finished(carrot) %>
+     <td><%= carrot.media %></td>
+     <td><%= link_to 'Show', carrot %></td>
+    <% else %>
+     <td></td>
+     <td></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

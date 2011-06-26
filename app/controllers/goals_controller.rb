@@ -3,8 +3,8 @@
 class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.xml
-  def index
-    @goals = Goal.all
+  def index	  
+    @goals = Goal.find(:all, :conditions => ['goals.user_id = (?)', current_user.id])
 
     respond_to do |format|
       format.html # index.html.erb

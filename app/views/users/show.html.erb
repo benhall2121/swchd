@@ -1,6 +1,28 @@
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %> |
-<%= link_to 'Goals', goals_path %> 
+<h2>Current Goals</h2>
+<ul>
+  <% @user.goals.each do |goal| %>
+    <li><%= goal.title %>
+    <% if goal.created_at > Time.now-1.day %>
+      new
+    <% end %>
+    <% if goal.deadline < Time.now+1.day && !goal.finished %>
+      Deadline Ending Soon
+    <% end %>
+    </li>
+    <ul>
+    <% fin = goal.finished %>
+     <% goal.carrots.each do |carrot| %>
+       <li>
+        <% if fin %>
+         <%= link_to carrot.title, carrot_path(carrot) %>
+        <% else %> 
+         <%= carrot.title %>
+         <% end %> 
+       </li>
+     <% end %>
+    </ul> 
+  <% end %>
+</ul>
 
 <h2>Friends</h2>
 <ul>

@@ -1,24 +1,31 @@
 <h1>Listing goals</h1>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>User</th>
-    <th>Friend</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @goals.each do |goal| %>
   <tr>
-    <td><%= goal.title %></td>
-    <td><%= goal.user_id %></td>
-    <td><%= goal.friend_id %></td>
-    <td><%= link_to 'Show', goal %></td>
-    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-    <td><%= link_to 'Destroy', goal, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <ul>
+  <li><%= goal.title %>
+    <% if goal.created_at > Time.now-1.day %>
+      new
+    <% end %>
+    <% if goal.deadline < Time.now+1.day && !goal.finished %>
+      Deadline Ending Soon
+    <% end %>
+    </li>
+    <ul>
+    <% fin = goal.finished %>
+     <% goal.carrots.each do |carrot| %>
+       <li>
+        <% if fin %>
+         <%= link_to carrot.title, carrot_path(carrot) %>
+        <% else %> 
+         <%= carrot.title %>
+         <% end %> 
+       </li>
+     <% end %>
+    </ul>
+    </tr>
 <% end %>
 </table>
 

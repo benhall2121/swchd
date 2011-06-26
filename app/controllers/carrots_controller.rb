@@ -1,8 +1,9 @@
 class CarrotsController < ApplicationController
+  before_filter :goal_finished, :only => [:show] 
   # GET /carrots
   # GET /carrots.xml
   def index
-    @carrots = Carrot.all
+    @carrots = Carrot.find(:all, :include => :goal, :conditions => ['goals.user_id = (?)', current_user.id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -21,6 +22,15 @@ class CarrotsController < ApplicationController
     end
   end
 
+  def goal_finished
+    @carrot = Carrot.find(params[:id]) 
+    if !@carrot.goal.finished
+    	    redirect_to root_path	 
+    return false    
+    end	    
+    return @carrot.goal.finished
+  end
+  
   # GET /carrots/new
   # GET /carrots/new.xml
   def new
