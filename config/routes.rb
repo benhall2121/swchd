@@ -10,7 +10,7 @@ Swchd::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   match '/c/:goal_id/:friend_id' => 'carrots#new'
   
-  root :to => "sessions#new"
+  root :to => "users#home"
   resources :users
   resources :sessions
 end

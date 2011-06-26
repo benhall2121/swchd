@@ -10,6 +10,7 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'mongrel'
 gem 'paperclip'
 gem 'rest-client'
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -3,8 +3,10 @@
 <head>
   <title>Carrot Dangle</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :all, 'jquery', 'application' %>
   <%= csrf_meta_tag %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "fancybox/jquery.fancybox-1.3.4.pack.js" %>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/fancybox/jquery.fancybox-1.3.4.css" />
 </head>
 <body>
 
@@ -17,8 +19,8 @@
     <%= link_to 'find friends', users_path %>
     <%= link_to 'carrots', carrots_path %>
   <% else %>
-    <%= link_to "Sign up", sign_up_path %> or
-    <%= link_to "log in", log_in_path %>
+    <%#= link_to "Sign up", sign_up_path %>
+    <%#= link_to "log in", log_in_path %>
   <% end %>
 </div>
 
