@@ -19,7 +19,7 @@
     <%= f.hidden_field :user_id %><br />
   </div>
   <div class="field">
-    <%= f.label :friend_id %><br />
+    <%= f.label 'Accountability Agent' %><br />
     <%= f.select :friend_id, current_user.friends.collect {|user| [ user.first_name + ' ' + user.last_name, user.id ] } %>
   </div>
   <div class="field">

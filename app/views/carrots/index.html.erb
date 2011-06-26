@@ -1,0 +1,29 @@
+<h1>Listing carrots</h1>
+
+<table>
+  <tr>
+    <th>Goal</th>
+    <th>Friend</th>
+    <th>Title</th>
+    <th>Media</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @carrots.each do |carrot| %>
+  <tr>
+    <td><%= carrot.goal_id %></td>
+    <td><%= carrot.friend_id %></td>
+    <td><%= carrot.title %></td>
+    <td><%= carrot.media %></td>
+    <td><%= link_to 'Show', carrot %></td>
+    <td><%= link_to 'Edit', edit_carrot_path(carrot) %></td>
+    <td><%= link_to 'Destroy', carrot, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Carrot', new_carrot_path %>

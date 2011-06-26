@@ -1,0 +1,27 @@
+<%= form_for(@carrot, :html => { :multipart => true } ) do |f| %>
+  <% if @carrot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@carrot.errors.count, "error") %> prohibited this carrot from being saved:</h2>
+
+      <ul>
+      <% @carrot.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :goal_id %>
+  <%= f.hidden_field :friend_id %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.file_field :media %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

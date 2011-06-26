@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  goal_id: 1
+  friend_id: 1
+  title: MyString
+  media: MyString
+
+two:
+  goal_id: 1
+  friend_id: 1
+  title: MyString
+  media: MyString
