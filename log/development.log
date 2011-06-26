@@ -17236,3 +17236,354 @@ Started GET "/users/19" for 127.0.0.1 at Sun Jun 26 15:07:15 -0700 2011
   [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 19))[0m
 Rendered users/show.html.erb within layouts/application (113.6ms)
 Completed 200 OK in 181ms (Views: 122.8ms | ActiveRecord: 1.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 15:16:51 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1
+Completed 404 Not Found in 169ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=19):
+  app/controllers/application_controller.rb:16:in `current_user'
+  app/controllers/application_controller.rb:10:in `require_login'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:16:55 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+Completed 404 Not Found in 125ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=19):
+  app/controllers/application_controller.rb:16:in `current_user'
+  app/controllers/users_controller.rb:6:in `home'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:17:19 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at Sun Jun 26 15:17:22 -0700 2011
+  Processing by SessionsController#new as 
+Rendered sessions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Jun 26 15:17:29 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"RuFSlAvB2zdESdKCtLo2QbQRn8sj28uA/8Uvn+iGouE=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 357ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 15:17:29 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)[0m
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 3)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE `friendships`.`user_id` = 1 AND `friendships`.`friend_id` = 3 LIMIT 1
+Rendered users/show.html.erb within layouts/application (165.7ms)
+Completed 200 OK in 311ms (Views: 174.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:17:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 15:17:32 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (goals.user_id = (1))
+Rendered goals/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 205ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 15:17:34 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered goals/_form.html.erb (22.2ms)
+Rendered goals/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 172ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sun Jun 26 15:18:13 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"new goal", "user_id"=>"1", "deadline"=>"06/01/2011", "message"=>"help me"}, "authenticity_token"=>"RuFSlAvB2zdESdKCtLo2QbQRn8sj28uA/8Uvn+iGouE=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  describe `goals`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `goals` (`message`, `title`, `created_at`, `finished`, `user_id`, `deadline`, `updated_at`, `friend_id`) VALUES ('help me', 'new goal', '2011-06-26 22:18:14', NULL, 1, '2011-06-01 00:00:00', '2011-06-26 22:18:14', NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 1))
+Redirected to http://localhost:3000/goals/76
+Completed 302 Found in 5520ms
+
+
+Started GET "/goals/76" for 127.0.0.1 at Sun Jun 26 15:18:19 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 76 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 76)
+Rendered goals/show.html.erb within layouts/application (163.8ms)
+Completed 200 OK in 248ms (Views: 173.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:23:14 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 74ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 15:23:14 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 76)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 3)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 2)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE `friendships`.`user_id` = 1 AND `friendships`.`friend_id` = 3 LIMIT 1
+Rendered users/show.html.erb within layouts/application (289.5ms)
+Completed 200 OK in 351ms (Views: 296.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:23:15 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sun Jun 26 15:23:18 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (41.9ms)
+Rendered users/edit.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 153ms (Views: 102.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/stylesheets/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 15:23:18 -0700 2011
+
+ActionController::RoutingError (No route matches "/users/stylesheets/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sun Jun 26 15:23:25 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"RuFSlAvB2zdESdKCtLo2QbQRn8sj28uA/8Uvn+iGouE=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "phone"=>"480414815723", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes: phone
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 190ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 15:23:25 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 76)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.5ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 3)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 2)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE `friendships`.`user_id` = 1 AND `friendships`.`friend_id` = 3 LIMIT 1
+Rendered users/show.html.erb within layouts/application (268.4ms)
+Completed 200 OK in 332ms (Views: 277.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:23:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 15:25:32 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 76)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 3)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 2)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+  [1m[35mFriendship Load (0.2ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE `friendships`.`user_id` = 1 AND `friendships`.`friend_id` = 3 LIMIT 1
+Rendered users/show.html.erb within layouts/application (290.7ms)
+Completed 200 OK in 471ms (Views: 299.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:25:34 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sun Jun 26 15:25:39 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_form.html.erb (47.8ms)
+Rendered users/edit.html.erb within layouts/application (71.1ms)
+Completed 200 OK in 132ms (Views: 81.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/stylesheets/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 15:25:39 -0700 2011
+
+ActionController::RoutingError (No route matches "/users/stylesheets/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sun Jun 26 15:25:43 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"RuFSlAvB2zdESdKCtLo2QbQRn8sj28uA/8Uvn+iGouE=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "phone"=>"480414815721", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `users` SET `updated_at` = '2011-06-26 22:25:43', `phone` = '480414815721' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 181ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 15:25:43 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 76)
+  [1m[36mFriendship Load (0.4ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 3)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 2)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE `friendships`.`user_id` = 1 AND `friendships`.`friend_id` = 3 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (274.9ms)
+Completed 200 OK in 336ms (Views: 281.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:25:44 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Sun Jun 26 15:26:00 -0700 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (41.5ms)
+Rendered users/edit.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 124ms (Views: 73.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/stylesheets/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 15:26:01 -0700 2011
+
+ActionController::RoutingError (No route matches "/users/stylesheets/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Sun Jun 26 15:26:09 -0700 2011
+  Processing by UsersController#update as HTML
+  Parameters: {"commit"=>"Update User", "authenticity_token"=>"RuFSlAvB2zdESdKCtLo2QbQRn8sj28uA/8Uvn+iGouE=", "utf8"=>"✓", "id"=>"1", "user"=>{"password_confirmation"=>"[FILTERED]", "phone"=>"4804148157", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yahoo.com') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `users` SET `password_salt` = '$2a$10$LC2lZI7eeQNe9qFldCAsZe', `password_hash` = '$2a$10$LC2lZI7eeQNe9qFldCAsZeLwgeDpkdWQKjOc0PvFpfRGT141X.O7O', `phone` = '4804148157', `updated_at` = '2011-06-26 22:26:09' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 367ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 15:26:09 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 76)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 3)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE `friendships`.`user_id` = 1 AND `friendships`.`friend_id` = 3 LIMIT 1
+Rendered users/show.html.erb within layouts/application (186.5ms)
+Completed 200 OK in 247ms (Views: 193.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:26:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
