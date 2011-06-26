@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_filter :require_login, :only => [:new, :destroy, :create, :home]		
+  skip_before_filter :require_login, :only => [:new, :destroy, :create, :home, :learnmore]		
   # GET /users
   # GET /users.xml
   def home
@@ -7,6 +7,9 @@ class UsersController < ApplicationController
       redirect_to user_path(current_user)	    
       return
     end	 
+  end
+  
+  def learnmore
   end
   
   def index

@@ -15889,3 +15889,1350 @@ Started GET "/goals/75" for 127.0.0.1 at Sun Jun 26 14:27:52 -0700 2011
   [1m[36mCarrot Load (0.5ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 75)[0m
 Rendered goals/show.html.erb within layouts/application (102.7ms)
 Completed 200 OK in 297ms (Views: 113.8ms | ActiveRecord: 2.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/goals/75" for 127.0.0.1 at Sun Jun 26 14:31:44 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 75 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 75)[0m
+Rendered goals/show.html.erb within layouts/application (217.0ms)
+Completed 200 OK in 457ms (Views: 231.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 14:36:22 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:36:22 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:37:05 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:37:08 -0700 2011
+
+ActionController::RoutingError (No route matches "/learnmore"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:37:13 -0700 2011
+
+ActionController::RoutingError (No route matches "/learnmore"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:38:15 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:38:16 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:38:16 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:38:16 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:38:20 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:38:30 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:38:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:38:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:38:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 14:39:21 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (44.4ms)
+Rendered users/new.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 118ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:39:25 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:39:25 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:39:25 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:39:25 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:40:28 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:40:30 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:40:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:40:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:40:31 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:40:34 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:40:35 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:40:35 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:40:35 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:41:08 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 115ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:41:10 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:41:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:41:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:41:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:41:15 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:41:15 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:41:15 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:41:15 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:41:18 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:41:19 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:41:19 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:41:19 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:41:21 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:41:23 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:41:23 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:41:23 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:41:23 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:41:31 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:41:31 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:41:31 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:41:31 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:43:08 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:43:10 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:43:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:43:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:43:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:43:13 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:43:14 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:43:14 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:43:14 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:43:24 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:43:26 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:43:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:43:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:43:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:43:39 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:43:43 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:43:43 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:43:43 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:43:43 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:44:14 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:44:17 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:44:17 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:44:17 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:44:17 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:44:47 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:44:49 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/images/back2.gif" for 127.0.0.1 at Sun Jun 26 14:44:49 -0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/back2.gif"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:45:00 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:45:02 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/images/back2.gif" for 127.0.0.1 at Sun Jun 26 14:45:02 -0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/back2.gif"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:45:04 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:45:08 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:45:38 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:45:39 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:45:43 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:45:52 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:45:54 -0700 2011
+  Processing by UsersController#learnmore as 
+Rendered users/learnmore.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:45:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:45:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:45:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/learnmore" for 127.0.0.1 at Sun Jun 26 14:45:57 -0700 2011
+  Processing by UsersController#learnmore as HTML
+Rendered users/learnmore.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/jquery-1.4.3.min.js" for 127.0.0.1 at Sun Jun 26 14:45:58 -0700 2011
+
+ActionController::RoutingError (No route matches "/js/jquery-1.4.3.min.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.css" for 127.0.0.1 at Sun Jun 26 14:45:58 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/fancybox/jquery.fancybox-1.3.4.pack.js" for 127.0.0.1 at Sun Jun 26 14:45:58 -0700 2011
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.4.pack.js"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:47:24 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:47:38 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:47:59 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:48:04 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 14:49:55 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (48.6ms)
+Rendered users/new.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 171ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 14:50:13 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x24ca2dc @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0227.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40710-vhdo08-0>, @content_type="image/jpeg", @original_filename="IMG_0227.JPG">, "password_confirmation"=>"[FILTERED]", "phone"=>"1234", "password"=>"[FILTERED]", "email"=>"benhall2121@yaho"}}
+WARNING: Can't mass-assign protected attributes: photo, phone
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'benhall2121@yaho') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.6ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`photo_content_type`, `first_name`, `photo_updated_at`, `photo_file_size`, `password_hash`, `phone`, `email`, `password_salt`, `last_name`, `updated_at`, `photo_file_name`, `created_at`) VALUES (NULL, NULL, NULL, NULL, '$2a$10$tg7GjA4m1WuWL8lqtFpAIuqMe4/U09hn4/jkHvkpzB9cWR.7yWF/y', NULL, 'benhall2121@yaho', '$2a$10$tg7GjA4m1WuWL8lqtFpAIu', NULL, '2011-06-26 21:50:14', NULL, '2011-06-26 21:50:14')[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 506ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 14:50:14 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+Rendered goals/_form.html.erb (15.8ms)
+Rendered goals/new.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 160ms (Views: 49.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:50:18 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 151ms
+
+
+Started GET "/users/12" for 127.0.0.1 at Sun Jun 26 14:50:18 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 12)[0m
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 12)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 12))[0m
+Rendered users/show.html.erb within layouts/application (137.0ms)
+Completed 200 OK in 200ms (Views: 146.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 14:50:19 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 14:50:54 -0700 2011
+  Processing by UsersController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 205ms
+
+
+Started GET "/users/12" for 127.0.0.1 at Sun Jun 26 14:50:55 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 12)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 12)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 12))[0m
+Rendered users/show.html.erb within layouts/application (203.0ms)
+Completed 200 OK in 273ms (Views: 216.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 14:50:55 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 14:50:57 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:50:57 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 14:51:01 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (122.2ms)
+Rendered users/new.html.erb within layouts/application (136.3ms)
+Completed 200 OK in 197ms (Views: 147.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 14:51:10 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x269ada0 @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0227.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40806-14uzvsj-0>, @content_type="image/jpeg", @original_filename="IMG_0227.JPG">, "password_confirmation"=>"[FILTERED]", "phone"=>"", "password"=>"[FILTERED]", "email"=>"asd"}}
+WARNING: Can't mass-assign protected attributes: photo, phone
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asd') LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  ROLLBACK
+Rendered users/_form.html.erb (21.9ms)
+Rendered users/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 136ms (Views: 44.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 14:51:16 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "phone"=>"", "password"=>"[FILTERED]", "email"=>"asdasdasd"}}
+WARNING: Can't mass-assign protected attributes: phone
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'asdasdasd') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`password_hash`, `photo_file_size`, `created_at`, `photo_file_name`, `email`, `updated_at`, `last_name`, `first_name`, `phone`, `password_salt`, `photo_updated_at`, `photo_content_type`) VALUES ('$2a$10$bRWdqfv2cX3YAmlCQEUofO7EUk7nhrRgjhTKMbCLngbT/Bm1wNSTi', NULL, '2011-06-26 21:51:16', NULL, 'asdasdasd', '2011-06-26 21:51:16', NULL, NULL, NULL, '$2a$10$bRWdqfv2cX3YAmlCQEUofO', NULL, NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (26.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 307ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 14:51:16 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1
+Rendered goals/_form.html.erb (15.9ms)
+Rendered goals/new.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 252ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:51:19 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 78ms
+
+
+Started GET "/users/13" for 127.0.0.1 at Sun Jun 26 14:51:19 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 13)
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 13)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 13))
+Rendered users/show.html.erb within layouts/application (187.1ms)
+Completed 200 OK in 252ms (Views: 195.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 14:51:20 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/carrots" for 127.0.0.1 at Sun Jun 26 14:52:52 -0700 2011
+  Processing by CarrotsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.`id` AS t0_r0, `carrots`.`goal_id` AS t0_r1, `carrots`.`friend_id` AS t0_r2, `carrots`.`title` AS t0_r3, `carrots`.`created_at` AS t0_r4, `carrots`.`updated_at` AS t0_r5, `carrots`.`media_file_name` AS t0_r6, `carrots`.`media_content_type` AS t0_r7, `carrots`.`media_file_size` AS t0_r8, `carrots`.`media_updated_at` AS t0_r9, `goals`.`id` AS t1_r0, `goals`.`title` AS t1_r1, `goals`.`user_id` AS t1_r2, `goals`.`friend_id` AS t1_r3, `goals`.`created_at` AS t1_r4, `goals`.`updated_at` AS t1_r5, `goals`.`deadline` AS t1_r6, `goals`.`message` AS t1_r7, `goals`.`finished` AS t1_r8 FROM `carrots` LEFT OUTER JOIN `goals` ON `goals`.`id` = `carrots`.`goal_id` WHERE (goals.user_id = (13))
+Rendered carrots/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 178ms (Views: 32.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 14:52:56 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (goals.user_id = (13))
+Rendered goals/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 151ms (Views: 43.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:52:59 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 76ms
+
+
+Started GET "/users/13" for 127.0.0.1 at Sun Jun 26 14:52:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 13)
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 13)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 13))
+Rendered users/show.html.erb within layouts/application (108.9ms)
+Completed 200 OK in 257ms (Views: 204.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 14:52:59 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 14:53:03 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:53:03 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at Sun Jun 26 14:53:05 -0700 2011
+  Processing by SessionsController#new as 
+Rendered sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Jun 26 14:53:13 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 365ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 14:53:14 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 73)
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 3)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 2)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 4)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE `friendships`.`user_id` = 1 AND `friendships`.`friend_id` = 3 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (349.2ms)
+Completed 200 OK in 412ms (Views: 354.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 14:53:15 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/carrots/5" for 127.0.0.1 at Sun Jun 26 14:53:17 -0700 2011
+  Processing by CarrotsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+Rendered carrots/show.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 181ms (Views: 36.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 14:56:37 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 14:56:38 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 14:56:43 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (37.2ms)
+Rendered users/new.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 109ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 14:57:03 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x254679c @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0238.PNG\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40806-13byfff-0>, @content_type="image/png", @original_filename="IMG_0238.PNG">, "password_confirmation"=>"[FILTERED]", "phone"=>"", "password"=>"[FILTERED]", "email"=>"ben"}}
+WARNING: Can't mass-assign protected attributes: photo, phone
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'ben') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `users` (`phone`, `updated_at`, `password_salt`, `created_at`, `photo_updated_at`, `photo_content_type`, `last_name`, `photo_file_name`, `password_hash`, `photo_file_size`, `email`, `first_name`) VALUES (NULL, '2011-06-26 21:57:04', '$2a$10$VKjjFpW8cv03fTOZlvW9QO', '2011-06-26 21:57:04', NULL, NULL, NULL, NULL, '$2a$10$VKjjFpW8cv03fTOZlvW9QOTGOXncAwZYN1opj0G464RMHpuUJYIOi', NULL, 'ben', NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 265ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 14:57:04 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 14 LIMIT 1
+Rendered goals/_form.html.erb (15.3ms)
+Rendered goals/new.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 235ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 15:00:34 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:00:34 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 15:00:38 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (37.7ms)
+Rendered users/new.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 108ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 15:00:56 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x26c6b6c @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0629.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40806-1dmj85d-0>, @content_type="image/jpeg", @original_filename="IMG_0629.JPG">, "password_confirmation"=>"[FILTERED]", "phone"=>"123456789", "password"=>"[FILTERED]", "email"=>"qwerty"}}
+WARNING: Can't mass-assign protected attributes: photo, phone
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'qwerty') LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.8ms)[0m  INSERT INTO `users` (`password_salt`, `photo_file_name`, `first_name`, `phone`, `password_hash`, `created_at`, `photo_content_type`, `photo_file_size`, `email`, `last_name`, `photo_updated_at`, `updated_at`) VALUES ('$2a$10$KcKoAYe5l9c5aHUkaxd1Te', NULL, NULL, NULL, '$2a$10$KcKoAYe5l9c5aHUkaxd1TeDPDId7gGo6MRFfRgnVBDUr6P8W5V1u.', '2011-06-26 22:00:56', NULL, NULL, 'qwerty', NULL, NULL, '2011-06-26 22:00:56')
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 269ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 15:00:56 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1
+Rendered goals/_form.html.erb (15.1ms)
+Rendered goals/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 161ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:00:58 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1[0m
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 74ms
+
+
+Started GET "/users/15" for 127.0.0.1 at Sun Jun 26 15:00:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 15)
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 15)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 15))
+Rendered users/show.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 167ms (Views: 114.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:00:59 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 15:02:32 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:02:32 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at Sun Jun 26 15:02:34 -0700 2011
+  Processing by SessionsController#new as 
+Rendered sessions/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 15:02:39 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (36.4ms)
+Rendered users/new.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 123ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 15:02:50 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x2321354 @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0066.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40806-md04rx-0>, @content_type="image/jpeg", @original_filename="IMG_0066.JPG">, "password_confirmation"=>"[FILTERED]", "phone"=>"qwer", "password"=>"[FILTERED]", "email"=>"qwer"}}
+WARNING: Can't mass-assign protected attributes: photo, phone
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'qwer') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`email`, `password_hash`, `created_at`, `photo_file_size`, `photo_file_name`, `photo_updated_at`, `updated_at`, `password_salt`, `first_name`, `last_name`, `phone`, `photo_content_type`) VALUES ('qwer', '$2a$10$gEELf3hsaHq2T8eTgPrVTuKD1xESKRp4LszzdKHxMDahZrwRzP9PO', '2011-06-26 22:02:51', NULL, NULL, NULL, '2011-06-26 22:02:51', '$2a$10$gEELf3hsaHq2T8eTgPrVTu', NULL, NULL, NULL, NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 344ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 15:02:51 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1
+Rendered goals/_form.html.erb (15.4ms)
+Rendered goals/new.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 159ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:02:54 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 77ms
+
+
+Started GET "/users/16" for 127.0.0.1 at Sun Jun 26 15:02:54 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 16)
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 16)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 16))
+Rendered users/show.html.erb within layouts/application (107.1ms)
+Completed 200 OK in 251ms (Views: 116.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at Sun Jun 26 15:02:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from require at script/rails:6)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 15:04:39 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:04:40 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 15:04:45 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (121.1ms)
+Rendered users/new.html.erb within layouts/application (134.9ms)
+Completed 200 OK in 241ms (Views: 145.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 15:05:01 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x26c0190 @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0066.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40985-gjaot7-0>, @content_type="image/jpeg", @original_filename="IMG_0066.JPG">, "password_confirmation"=>"[FILTERED]", "phone"=>"12", "password"=>"[FILTERED]", "email"=>"aaaww"}}
+WARNING: Can't mass-assign protected attributes: photo, phone
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'aaaww') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.6ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`photo_content_type`, `password_hash`, `password_salt`, `photo_updated_at`, `last_name`, `phone`, `created_at`, `first_name`, `email`, `photo_file_name`, `updated_at`, `photo_file_size`) VALUES (NULL, '$2a$10$QlGXv9t/QFQKZuLvdJ23y.oTX2bzdIEt5X980DaXveju2RmhKpzw2', '$2a$10$QlGXv9t/QFQKZuLvdJ23y.', NULL, NULL, NULL, '2011-06-26 22:05:01', NULL, 'aaaww', NULL, '2011-06-26 22:05:01', NULL)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 372ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 15:05:01 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+Rendered goals/_form.html.erb (90.9ms)
+Rendered goals/new.html.erb within layouts/application (112.3ms)
+Completed 200 OK in 238ms (Views: 123.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 15:06:10 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:06:10 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 15:06:12 -0700 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (37.0ms)
+Rendered users/new.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 107ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 15:06:23 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x26fbb78 @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0067.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40985-1nldsyy-0>, @content_type="image/jpeg", @original_filename="IMG_0067.JPG">, "password_confirmation"=>"[FILTERED]", "phone"=>"1234", "password"=>"[FILTERED]", "email"=>"1234"}}
+WARNING: Can't mass-assign protected attributes: phone
+[paperclip] identify -format %wx%h '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110626-40985-xforak-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110626-40985-xforak-0.JPG[0]' -resize "150x150>" '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110626-40985-xforak-020110626-40985-18blmfn-0' 2>/dev/null
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY '1234') LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`phone`, `photo_file_name`, `first_name`, `password_hash`, `updated_at`, `photo_updated_at`, `photo_content_type`, `photo_file_size`, `password_salt`, `created_at`, `email`, `last_name`) VALUES (NULL, 'IMG_0067.JPG', NULL, '$2a$10$TzqCAlNZCVJrt2qNy6PCIeO4fpsptSeHKu0APcWZDj2EicGEZZclu', '2011-06-26 22:06:26', '2011-06-26 22:06:23', 'image/jpeg', 1235770, '$2a$10$TzqCAlNZCVJrt2qNy6PCIe', '2011-06-26 22:06:26', '1234', NULL)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/Ben/desktop/work/sidework/swchd/public/system/photos/18/original/IMG_0067.JPG
+[paperclip] saving /Users/Ben/desktop/work/sidework/swchd/public/system/photos/18/small/IMG_0067.JPG
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 2260ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 15:06:26 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+Rendered goals/_form.html.erb (106.6ms)
+Rendered goals/new.html.erb within layouts/application (127.8ms)
+Completed 200 OK in 260ms (Views: 137.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:06:28 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+Redirected to http://localhost:3000/users/18
+Completed 302 Found in 74ms
+
+
+Started GET "/users/18" for 127.0.0.1 at Sun Jun 26 15:06:28 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 18)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 18)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 18))[0m
+Rendered users/show.html.erb within layouts/application (190.3ms)
+Completed 200 OK in 252ms (Views: 199.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 15:06:59 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:06:59 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sun Jun 26 15:07:01 -0700 2011
+  Processing by UsersController#new as 
+Rendered users/_form.html.erb (41.0ms)
+Rendered users/new.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 139ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun Jun 26 15:07:12 -0700 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x2329aa4 @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"IMG_0069.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/RackMultipart20110626-40985-14lk0cq-0>, @content_type="image/jpeg", @original_filename="IMG_0069.JPG">, "password_confirmation"=>"[FILTERED]", "phone"=>"fat", "password"=>"[FILTERED]", "email"=>"fat"}}
+WARNING: Can't mass-assign protected attributes: phone
+[paperclip] identify -format %wx%h '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110626-40985-1hg1l65-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110626-40985-1hg1l65-0.JPG[0]' -resize "150x150>" '/var/folders/24/24aCbtOxGYmp6t+LQ4nGD++++TI/-Tmp-/stream20110626-40985-1hg1l65-020110626-40985-cg92lh-0' 2>/dev/null
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'fat') LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  describe `users`
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `users` (`last_name`, `photo_file_name`, `password_salt`, `updated_at`, `password_hash`, `phone`, `photo_content_type`, `created_at`, `email`, `first_name`, `photo_updated_at`, `photo_file_size`) VALUES (NULL, 'IMG_0069.JPG', '$2a$10$LyjPDKrztgkZ/zO8Fhv8g.', '2011-06-26 22:07:13', '$2a$10$LyjPDKrztgkZ/zO8Fhv8g.B.0nUPWd0QDKx0XUJsz6.DkB5SO7ABC', NULL, 'image/jpeg', '2011-06-26 22:07:13', 'fat', NULL, '2011-06-26 22:07:13', 151715)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/Ben/desktop/work/sidework/swchd/public/assets/userimage/19/original/IMG_0069.JPG
+[paperclip] saving /Users/Ben/desktop/work/sidework/swchd/public/assets/userimage/19/small/IMG_0069.JPG
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/goals/new
+Completed 302 Found in 528ms
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 15:07:13 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+Rendered goals/_form.html.erb (16.3ms)
+Rendered goals/new.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 168ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 15:07:15 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 77ms
+
+
+Started GET "/users/19" for 127.0.0.1 at Sun Jun 26 15:07:15 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 19)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 19)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 19))[0m
+Rendered users/show.html.erb within layouts/application (113.6ms)
+Completed 200 OK in 181ms (Views: 122.8ms | ActiveRecord: 1.7ms)

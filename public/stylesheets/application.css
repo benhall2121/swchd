@@ -45,3 +45,9 @@ div#header_box_right span{
 }
 
 #box{width:900px;margin:0 auto; -moz-border-radius:15px; -webkit-border-radius:15px; background: rgba(255, 255, 255,.5); border:1px solid #859e2a; padding:11px;}
+
+.learnmore{
+	background-image: url('images/back2.gif'); 
+}
+
+
