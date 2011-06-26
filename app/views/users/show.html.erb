@@ -5,7 +5,7 @@
     <% if goal.created_at > Time.now-1.day %>
       new
     <% end %>
-    <% if goal.deadline < Time.now+1.day && !goal.finished %>
+    <% if goal.deadline && goal.deadline < Time.now+1.day && !goal.finished %>
       Deadline Ending Soon
     <% end %>
     </li>
@@ -28,9 +28,16 @@
 <ul>
   <% for friendship in @user.friendships %>
     <li>
-      <%=h friendship.friend.email %>
+      <%= link_to friendship.friend.email, user_path(friendship.friend) %>
       (<%= link_to "remove", friendship, :method => :delete %>)
     </li>
+    <ul>
+      <% friendship.friend.goals.each do |a| %>
+        <li>
+          <%= link_to a.title, goal_path(a) %> <%= link_to 'Add a Carrot', new_carrot_path(:goal_id => a.id, :friend_id => current_user.id) %>
+        </li>
+      <% end %>
+    </ul>
   <% end %>
 </ul>
 
@@ -39,7 +46,7 @@
 <h2>Friended by Users</h2>
 <ul>
   <% for user in @user.inverse_friends %>
-    <li><%= user.email %></li>
+  <li><%= link_to user.email, user_path(user) %> <% if !already_friends(user.id) %><%= link_to 'Add as a Friend', friendships_path(:friend_id => user), :method => :post %><% end %></li>
   <% end %>
 </ul>
 
