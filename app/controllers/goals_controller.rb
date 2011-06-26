@@ -47,7 +47,7 @@ class GoalsController < ApplicationController
     respond_to do |format|
       if @goal.save
       	
-      	user_name = @goal.user.first_name + ' ' + @goal.user.last_name
+      	user_name = (@goal.user.first_name || '') + ' ' + (@goal.user.last_name || '')
       	title = @goal.title
       	mes = @goal.message
       	#goal_friend_phone = @goal.friend.phone

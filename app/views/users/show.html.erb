@@ -1,4 +1,4 @@
-<h2>Current Goals</h2>
+<%= image_tag @user.photo.url(:small) %><h2>Current Goals</h2>
 <ul>
   <% @user.goals.each do |goal| %>
     <li><%= link_to goal.title, goal_path(goal) %>
