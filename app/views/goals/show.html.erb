@@ -11,15 +11,27 @@
 </p>
 
 <p>
-  <b>Friend:</b>
-  <%= @goal.friend.first_name %>
-</p>
-
-<p>
   <b>Message:</b>
   <%= @goal.message %>
 </p>
 
+<p>
+  <b>Deadline:</b>
+  <%= @goal.deadline %>
+</p
 
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
-<%= link_to 'Back', goals_path %>
+<p>
+  <b>Carrots for this goal</b><br />
+  <ul>
+   <% fin = @goal.finished %>
+  <% for carrot in @goal.carrots %>
+        <li>
+        <% if fin %>
+         <%= link_to carrot.title, carrot_path(carrot) %>
+        <% else %> 
+         <%= carrot.title %>
+         <% end %> 
+        </li> 
+  <% end %>
+  </ul>
+</p>  

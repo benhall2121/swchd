@@ -1,7 +1,7 @@
 <h2>Current Goals</h2>
 <ul>
   <% @user.goals.each do |goal| %>
-    <li><%= goal.title %>
+    <li><%= link_to goal.title, goal_path(goal) %>
     <% if goal.created_at > Time.now-1.day %>
       new
     <% end %>

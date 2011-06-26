@@ -9,7 +9,7 @@
     <% if goal.created_at > Time.now-1.day %>
       new
     <% end %>
-    <% if goal.deadline < Time.now+1.day && !goal.finished %>
+    <% if goal.deadline && goal.deadline < Time.now+1.day && !goal.finished %>
       Deadline Ending Soon
     <% end %>
     </li>

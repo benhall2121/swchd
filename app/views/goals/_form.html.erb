@@ -18,13 +18,13 @@
   <div class="field">
     <%= f.hidden_field :user_id %><br />
   </div>
- <!-- <div class="field">
-    <%= f.label 'Accountability Agent' %><br />
-    <%= f.select :friend_id, current_user.friends.collect {|user| [ user.first_name + ' ' + user.last_name, user.id ] } %>
-  </div> -->
   <div class="field">
     <%= f.label :message %><br />
     <%= f.text_field :message %>
+  </div>
+  <div class="field">
+    <%= f.label 'Deadline' %>
+    <%= f.text_field :deadline, :id => 'date_picker_field' %>
   </div>
   <div class="actions">
     <%= f.submit %>

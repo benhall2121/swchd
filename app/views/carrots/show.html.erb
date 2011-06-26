@@ -2,14 +2,14 @@
 
 <p>
   <b>Goal:</b>
-  <%= @carrot.goal_id %>
+  <%= @carrot.goal.title %>
 </p>
-
+<!--
 <p>
   <b>Friend:</b>
   <%= @carrot.friend_id %>
 </p>
-
+-->
 <p>
   <b>Title:</b>
   <%= @carrot.title %>
@@ -20,7 +20,3 @@
  <%= link_to (image_tag @carrot.media.url(:small)), @carrot.media.url(:original) %>
 </p>
 <% end %>
-
-
-<%= link_to 'Edit', edit_carrot_path(@carrot) %> |
-<%= link_to 'Back', carrots_path %>

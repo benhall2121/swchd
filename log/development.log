@@ -10490,3 +10490,982 @@ Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 10:23:01 -0700 2011
 Rendered goals/_form.html.erb (133.3ms)
 Rendered goals/new.html.erb within layouts/application (151.6ms)
 Completed 200 OK in 268ms (Views: 161.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 10:31:43 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE (goals.user_id = (8))
+Rendered goals/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 123ms (Views: 31.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 10:31:45 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 8))
+Rendered goals/_form.html.erb (48.5ms)
+Rendered goals/new.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 274ms (Views: 79.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 11:01:12 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 11:08:15 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 8))
+Rendered goals/_form.html.erb (153.7ms)
+Rendered goals/new.html.erb within layouts/application (172.2ms)
+Completed 200 OK in 315ms (Views: 185.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/smalllogo.png" for 127.0.0.1 at Sun Jun 26 11:08:16 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/smalllogo.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 11:08:25 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 8))
+Rendered goals/_form.html.erb (52.4ms)
+Rendered goals/new.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 205ms (Views: 84.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/images/smalllogo.png" for 127.0.0.1 at Sun Jun 26 11:08:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/images/images/smalllogo.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 11:09:15 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 8))
+Rendered goals/_form.html.erb (59.4ms)
+Rendered goals/new.html.erb within layouts/application (79.2ms)
+Completed 200 OK in 302ms (Views: 91.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 11:09:37 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 8))
+Rendered goals/_form.html.erb (51.9ms)
+Rendered goals/new.html.erb within layouts/application (75.2ms)
+Completed 200 OK in 289ms (Views: 181.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Sun Jun 26 11:10:49 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 11:10:49 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at Sun Jun 26 11:10:53 -0700 2011
+  Processing by SessionsController#new as 
+Rendered sessions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Jun 26 11:11:01 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 405ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 11:11:01 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.7ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+Rendered users/show.html.erb within layouts/application (224.1ms)
+Completed 200 OK in 403ms (Views: 231.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/carrots/5" for 127.0.0.1 at Sun Jun 26 11:11:27 -0700 2011
+  Processing by CarrotsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+Rendered carrots/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 283ms (Views: 34.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/carrots/5" for 127.0.0.1 at Sun Jun 26 11:12:38 -0700 2011
+  Processing by CarrotsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+Rendered carrots/show.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 277ms (Views: 40.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/carrots/5" for 127.0.0.1 at Sun Jun 26 11:13:42 -0700 2011
+  Processing by CarrotsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCarrot Load (0.5ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1[0m
+Rendered carrots/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 180ms (Views: 31.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Jun 26 11:13:56 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (89.8ms)
+Completed 200 OK in 177ms (Views: 121.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Jun 26 11:14:39 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (92.2ms)
+Completed 200 OK in 155ms (Views: 104.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Jun 26 11:15:02 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (93.5ms)
+Completed 200 OK in 275ms (Views: 105.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Jun 26 11:15:34 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 112ms (Views: 61.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/friendships?friend_id=4" for 127.0.0.1 at Sun Jun 26 11:15:48 -0700 2011
+  Processing by FriendshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"qW2oM2IceZpvbsTVTZkgjgw51RtIxrYdyLT4lvcGI0A=", "friend_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  describe `friendships`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `friendships` (`updated_at`, `user_id`, `created_at`, `friend_id`) VALUES ('2011-06-26 18:15:48', 1, '2011-06-26 18:15:48', 4)[0m
+  [1m[35mSQL (25.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 251ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 11:15:48 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 69ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 11:15:49 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.5ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (1.6ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.2ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))
+Rendered users/show.html.erb within layouts/application (315.9ms)
+Completed 200 OK in 379ms (Views: 322.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 11:16:30 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)[0m
+  [1m[35mCarrot Load (0.5ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)
+  [1m[36mFriendship Load (0.4ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+Rendered users/show.html.erb within layouts/application (343.6ms)
+Completed 200 OK in 409ms (Views: 353.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/goals/64" for 127.0.0.1 at Sun Jun 26 11:16:32 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 64 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 176ms (Views: 94.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 11:18:48 -0700 2011
+  Processing by UsersController#home as HTML
+Rendered users/home.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at Sun Jun 26 11:18:51 -0700 2011
+  Processing by SessionsController#new as 
+Rendered sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 76ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Jun 26 11:18:59 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"benhall2121@yahoo.com"}
+  [1m[35mUser Load (4.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'benhall2121@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 271ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 11:18:59 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (9.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))[0m
+Rendered users/show.html.erb within layouts/application (344.8ms)
+Completed 200 OK in 436ms (Views: 356.6ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/goals/64" for 127.0.0.1 at Sun Jun 26 11:19:02 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (7.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (10.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 64 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (185.0ms)
+Completed 200 OK in 303ms (Views: 195.3ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/goals/64" for 127.0.0.1 at Sun Jun 26 11:19:34 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 64 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (65.2ms)
+Completed 200 OK in 149ms (Views: 75.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/goals/64" for 127.0.0.1 at Sun Jun 26 11:20:22 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (4.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (6.9ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 64 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Rendered goals/show.html.erb within layouts/application (179.8ms)
+Completed 500 Internal Server Error in 294ms
+
+ActionView::Template::Error (undefined method `carrot' for #<Goal:0x2317430>):
+    20:   <%= @goal.message %>
+    21: </p>
+    22: 
+    23: <% @goal.carrot.each do |h| %>
+    24:   hey
+    25: <% end %>
+    26: 
+  app/views/goals/show.html.erb:23:in `_app_views_goals_show_html_erb___668466486_18390980_0'
+  app/controllers/goals_controller.rb:20:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.9ms)
+
+
+Started GET "/goals/64" for 127.0.0.1 at Sun Jun 26 11:22:08 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 64 LIMIT 1[0m
+ERROR: compiling _app_views_goals_show_html_erb___668466486_19046070_0 RAISED compile error
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:23: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+... for carrot in @goal.carrots );@output_buffer.safe_concat('h...
+                              ^
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:24: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:30: syntax error, unexpected kENSURE, expecting ')'
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:32: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_goals_show_html_erb___668466486_19046070_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "goals/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Title:</b>
+  ');@output_buffer.append= ( @goal.title );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>User:</b>
+  ');@output_buffer.append= ( @goal.user.first_name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<!--
+<p>
+  <b>Friend:</b>
+  ');@output_buffer.append= ( @goal.friend.first_name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+-->
+<p>
+  <b>Message:</b>
+  ');@output_buffer.append= ( @goal.message );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.append= ( for carrot in @goal.carrots );@output_buffer.safe_concat('hey
+'); end 
+@output_buffer.safe_concat('
+
+');@output_buffer.append= ( link_to 'Edit', edit_goal_path(@goal) );@output_buffer.safe_concat(' |
+');@output_buffer.append= ( link_to 'Back', goals_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:32:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_view/template.rb:134:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:59:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.8/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/Ben/desktop/work/sidework/swchd/app/controllers/goals_controller.rb:20:in `show'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:441:in `_run__427456531__process_action__453433196__callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_controller/metal.rb:178:in `action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/application.rb:168:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/application.rb:77:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/chunked.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:67:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/mongrel.rb:38:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/commands/server.rb:65:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/commands.rb:30
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/commands.rb:27:in `tap'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.8/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered goals/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (compile error
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:23: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+... for carrot in @goal.carrots );@output_buffer.safe_concat('h...
+                              ^
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:24: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:30: syntax error, unexpected kENSURE, expecting ')'
+/Users/Ben/desktop/work/sidework/swchd/app/views/goals/show.html.erb:32: syntax error, unexpected kEND, expecting ')'):
+    20:   <%= @goal.message %>
+    21: </p>
+    22: 
+    23: <%= for carrot in @goal.carrots %>hey
+    24: <% end %>
+    25: 
+    26: 
+  app/views/goals/show.html.erb:32:in `compile'
+  app/controllers/goals_controller.rb:20:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (57.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (70.9ms)
+
+
+Started GET "/goals/64" for 127.0.0.1 at Sun Jun 26 11:22:34 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (10.6ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 64 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)
+Rendered goals/show.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 297ms (Views: 106.5ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 11:22:39 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 107ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 11:22:39 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+  [1m[35mFriendship Load (0.3ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))
+Rendered users/show.html.erb within layouts/application (223.5ms)
+Completed 200 OK in 371ms (Views: 230.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/goals/68" for 127.0.0.1 at Sun Jun 26 11:22:41 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (10.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (9.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCarrot Load (1.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+Rendered goals/show.html.erb within layouts/application (120.7ms)
+Completed 200 OK in 327ms (Views: 131.2ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/goals/68" for 127.0.0.1 at Sun Jun 26 11:24:48 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mCarrot Load (0.5ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+Rendered goals/show.html.erb within layouts/application (113.3ms)
+Completed 200 OK in 202ms (Views: 126.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/goals/68" for 127.0.0.1 at Sun Jun 26 11:25:21 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+Rendered goals/show.html.erb within layouts/application (106.5ms)
+Completed 200 OK in 190ms (Views: 116.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/carrots/5" for 127.0.0.1 at Sun Jun 26 11:25:23 -0700 2011
+  Processing by CarrotsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+Rendered carrots/show.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 257ms (Views: 30.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/goals/68" for 127.0.0.1 at Sun Jun 26 11:27:24 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (152.6ms)
+Completed 500 Internal Server Error in 237ms
+
+ActionView::Template::Error (undefined local variable or method `goal' for #<#<Class:0x245ee88>:0x245dc40>):
+    23: <p>
+    24:   <b>Carrots for this goal</b><br />
+    25:   <ul>
+    26:    <% fin = goal.finished %>
+    27:   <% for carrot in @goal.carrots %>
+    28:         <% if fin %>
+    29:          <%= link_to carrot.title, carrot_path(carrot) %>
+  app/views/goals/show.html.erb:26:in `_app_views_goals_show_html_erb___668466486_19064500_0'
+  app/controllers/goals_controller.rb:20:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.7ms)
+
+
+Started GET "/goals/68" for 127.0.0.1 at Sun Jun 26 11:27:34 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (5.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+Rendered goals/show.html.erb within layouts/application (121.8ms)
+Completed 200 OK in 246ms (Views: 131.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/goals/68" for 127.0.0.1 at Sun Jun 26 11:27:58 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+Rendered goals/show.html.erb within layouts/application (110.9ms)
+Completed 200 OK in 197ms (Views: 121.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 26 11:28:02 -0700 2011
+  Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 63ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun Jun 26 11:28:02 -0700 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (`goals`.user_id = 1)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT `friendships`.* FROM `friendships` WHERE (`friendships`.user_id = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.user_id WHERE ((`friendships`.friend_id = 1))
+Rendered users/show.html.erb within layouts/application (207.2ms)
+Completed 200 OK in 360ms (Views: 213.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Jun 26 11:28:07 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 188ms (Views: 54.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 11:28:13 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (goals.user_id = (1))
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+Rendered goals/index.html.erb within layouts/application (100.8ms)
+Completed 200 OK in 201ms (Views: 112.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/carrots/5" for 127.0.0.1 at Sun Jun 26 11:28:15 -0700 2011
+  Processing by CarrotsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE `carrots`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 68 LIMIT 1
+Rendered carrots/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 271ms (Views: 29.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 11:28:18 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.5ms)[0m  SELECT `goals`.* FROM `goals` WHERE (goals.user_id = (1))
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.2ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+Rendered goals/index.html.erb within layouts/application (184.5ms)
+Completed 200 OK in 295ms (Views: 198.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 11:28:20 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 1))[0m
+Rendered goals/_form.html.erb (46.8ms)
+Rendered goals/new.html.erb within layouts/application (51.0ms)
+Completed 500 Internal Server Error in 164ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+    20:   </div>
+    21:  <!-- <div class="field">
+    22:     <%= f.label 'Accountability Agent' %><br />
+    23:     <%= f.select :friend_id, current_user.friends.collect {|user| [ user.first_name + ' ' + user.last_name, user.id ] } %>
+    24:   </div> -->
+    25:   <div class="field">
+    26:     <%= f.label :message %><br />
+  app/views/goals/_form.html.erb:23:in `_app_views_goals__form_html_erb__327589456_19153920_452976'
+  app/views/goals/_form.html.erb:23:in `_app_views_goals__form_html_erb__327589456_19153920_452976'
+  app/views/goals/_form.html.erb:1:in `_app_views_goals__form_html_erb__327589456_19153920_452976'
+  app/views/goals/new.html.erb:3:in `_app_views_goals_new_html_erb___22791970_19175990_0'
+  app/controllers/goals_controller.rb:31:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.9ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 11:28:45 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered goals/_form.html.erb (13.2ms)
+Rendered goals/new.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 245ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sun Jun 26 11:28:57 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"Win", "user_id"=>"1", "message"=>"I will win"}, "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`created_at`, `deadline`, `message`, `user_id`, `finished`, `updated_at`, `title`, `friend_id`) VALUES ('2011-06-26 18:28:58', NULL, 'I will win', 1, NULL, '2011-06-26 18:28:58', 'Win', NULL)
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 119ms
+
+NoMethodError (undefined method `phone' for nil:NilClass):
+  app/controllers/goals_controller.rb:53:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.2ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sun Jun 26 11:29:51 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"Win", "user_id"=>"1", "message"=>"I will win"}, "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `goals` (`message`, `updated_at`, `created_at`, `friend_id`, `title`, `finished`, `user_id`, `deadline`) VALUES ('I will win', '2011-06-26 18:29:51', '2011-06-26 18:29:51', NULL, 'Win', NULL, 1, NULL)
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 120ms
+
+NoMethodError (undefined method `phone' for nil:NilClass):
+  app/controllers/goals_controller.rb:53:in `create'
+  app/controllers/goals_controller.rb:47:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.6ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sun Jun 26 11:30:27 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"Win", "user_id"=>"1", "message"=>"I will win"}, "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`message`, `created_at`, `friend_id`, `finished`, `updated_at`, `user_id`, `deadline`, `title`) VALUES ('I will win', '2011-06-26 18:30:27', NULL, NULL, '2011-06-26 18:30:27', 1, NULL, 'Win')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 1))[0m
+Redirected to http://localhost:3000/goals/72
+Completed 302 Found in 6088ms
+
+
+Started GET "/goals/72" for 127.0.0.1 at Sun Jun 26 11:30:33 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 72 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered goals/show.html.erb within layouts/application (40.6ms)
+Completed 500 Internal Server Error in 124ms
+
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    12: <!--
+    13: <p>
+    14:   <b>Friend:</b>
+    15:   <%= @goal.friend.first_name %>
+    16: </p>
+    17: -->
+    18: <p>
+  app/views/goals/show.html.erb:15:in `_app_views_goals_show_html_erb___668466486_19443740_0'
+  app/controllers/goals_controller.rb:20:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.0ms)
+
+
+Started GET "/goals/72" for 127.0.0.1 at Sun Jun 26 11:31:42 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 72 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCarrot Load (1.1ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 72)
+Rendered goals/show.html.erb within layouts/application (84.4ms)
+Completed 200 OK in 264ms (Views: 93.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 11:31:47 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT `goals`.* FROM `goals` WHERE (goals.user_id = (1))
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)[0m
+Rendered goals/index.html.erb within layouts/application (171.4ms)
+Completed 500 Internal Server Error in 267ms
+
+ActionView::Template::Error (undefined method `<' for nil:NilClass):
+    9:     <% if goal.created_at > Time.now-1.day %>
+    10:       new
+    11:     <% end %>
+    12:     <% if goal.deadline < Time.now+1.day && !goal.finished %>
+    13:       Deadline Ending Soon
+    14:     <% end %>
+    15:     </li>
+  app/views/goals/index.html.erb:12:in `_app_views_goals_index_html_erb___817768228_18879980_0'
+  app/views/goals/index.html.erb:5:in `each'
+  app/views/goals/index.html.erb:5:in `_app_views_goals_index_html_erb___817768228_18879980_0'
+  app/controllers/goals_controller.rb:9:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.5ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 11:33:49 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (goals.user_id = (1))[0m
+  [1m[35mCarrot Load (0.5ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)[0m
+  [1m[35mCarrot Load (0.2ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)
+  [1m[36mCarrot Load (0.2ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 70)[0m
+  [1m[35mCarrot Load (0.2ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 71)
+  [1m[36mCarrot Load (0.2ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 72)[0m
+Rendered goals/index.html.erb within layouts/application (110.7ms)
+Completed 200 OK in 207ms (Views: 118.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 11:38:35 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (goals.user_id = (1))[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 70)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 71)
+  [1m[36mCarrot Load (0.2ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 72)[0m
+Rendered goals/index.html.erb within layouts/application (114.0ms)
+Completed 200 OK in 217ms (Views: 124.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/goals/new" for 127.0.0.1 at Sun Jun 26 11:38:39 -0700 2011
+  Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered goals/_form.html.erb (16.3ms)
+Rendered goals/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 243ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/goals" for 127.0.0.1 at Sun Jun 26 11:38:45 -0700 2011
+  Processing by GoalsController#create as HTML
+  Parameters: {"commit"=>"Create Goal", "goal"=>{"title"=>"", "user_id"=>"1", "deadline"=>"06/05/2011", "message"=>""}, "authenticity_token"=>"R9ivh8qw/c8wNfIF1vAt+g1z6+yJ8GLa+nW9xQtKFMw=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `goals`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `goals` (`finished`, `created_at`, `friend_id`, `title`, `user_id`, `deadline`, `updated_at`, `message`) VALUES (NULL, '2011-06-26 18:38:45', NULL, '', 1, '2011-06-05 00:00:00', '2011-06-26 18:38:45', '')
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `friendships` ON `users`.id = `friendships`.friend_id WHERE ((`friendships`.user_id = 1))[0m
+Redirected to http://localhost:3000/goals/73
+Completed 302 Found in 5570ms
+
+
+Started GET "/goals/73" for 127.0.0.1 at Sun Jun 26 11:38:51 -0700 2011
+  Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE `goals`.`id` = 73 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCarrot Load (0.4ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 73)[0m
+Rendered goals/show.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 258ms (Views: 93.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/goals" for 127.0.0.1 at Sun Jun 26 11:40:12 -0700 2011
+  Processing by GoalsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT `goals`.* FROM `goals` WHERE (goals.user_id = (1))[0m
+  [1m[35mCarrot Load (0.9ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 64)
+  [1m[36mCarrot Load (0.3ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 65)[0m
+  [1m[35mCarrot Load (0.2ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 66)
+  [1m[36mCarrot Load (0.2ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 68)[0m
+  [1m[35mCarrot Load (0.3ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 69)
+  [1m[36mCarrot Load (0.2ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 70)[0m
+  [1m[35mCarrot Load (0.2ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 71)
+  [1m[36mCarrot Load (0.2ms)[0m  [1mSELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 72)[0m
+  [1m[35mCarrot Load (0.4ms)[0m  SELECT `carrots`.* FROM `carrots` WHERE (`carrots`.goal_id = 73)
+Rendered goals/index.html.erb within layouts/application (198.0ms)
+Completed 200 OK in 305ms (Views: 206.3ms | ActiveRecord: 3.7ms)

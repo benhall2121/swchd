@@ -10,4 +10,6 @@ $(document).ready(function(){
 		'transitionOut'		: 'elastic'
 	});
        
+       //DatePicker
+       $('#date_picker_field').datepicker();
 });

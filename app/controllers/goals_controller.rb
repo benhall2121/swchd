@@ -50,17 +50,17 @@ class GoalsController < ApplicationController
       	user_name = @goal.user.first_name + ' ' + @goal.user.last_name
       	title = @goal.title
       	mes = @goal.message
-      	goal_friend_phone = @goal.friend.phone
+      	#goal_friend_phone = @goal.friend.phone
       	randnum = rand(10000).to_s;
       	goal_id = @goal.id
       	
       	# Message for accountability agent
-      	if goal_friend_phone
-          message = 'Will you be my ('+ user_name + ') accountability agent on DangleCarrot.com for my new goal: ' + title     
-      	  phone = goal_friend_phone
-       	  url = 'https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=' + phone + '&msg=' + message
-      	  response = RestClient.get URI.encode(url)   
-        end
+      	#if goal_friend_phone
+        #  message = 'Will you be my ('+ user_name + ') accountability agent on DangleCarrot.com for my new goal: ' + title     
+      	#  phone = goal_friend_phone
+       	#  url = 'https://api.tropo.com/1.0/sessions?action=create&token=0452fe7820523740b9b540e50072440c154005259a1b2ac08ca573e69cf7a3428f3637927a92c9d6c4704b05&numberToDial=' + phone + '&msg=' + message
+      	#  response = RestClient.get URI.encode(url)   
+        #end
       	  
       	# Message for carrots
       	@goal.user.friends.each do |user|
